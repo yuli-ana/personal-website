@@ -1,0 +1,57 @@
+
+
+
+/* Mixins */
+
+@mixin fontSize($size-value) {
+  font-size: ($size-value / 10) * 1rem;
+}
+
+@mixin centerFlex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$screen-xxl: 0;
+$screen-xl: 0;
+$screen-md: 0;
+$screen-sm: 0;
+$screen-xs: 0;
+$screen-xxs: 0;
+
+@mixin tablet-landscape {
+  @media only screen and(max-width: $screen-xxl) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-sm {
+  @media only screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media only screen and(max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-sm {
+  @media only screen and(max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media only screen and(max-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin phone-xxs {
+  @media only screen and(max-width: $screen-xxs) {
+    @content;
+  }
+}
