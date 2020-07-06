@@ -459,7 +459,7 @@ body {
           align-items: center;
   text-align: center;
   height: 50px;
-  background-color: #ff3411;
+  background-color: cadetblue;
   border-radius: 30px;
 }
 
@@ -469,7 +469,7 @@ body {
 }
 
 .btn {
-  background-color: #ff3411;
+  background-color: cadetblue;
   border: unset;
   height: 45px;
   color: #ffffff;
