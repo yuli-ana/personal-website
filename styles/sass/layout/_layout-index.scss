@@ -6,6 +6,7 @@
 
 .row {
   display: flex;
+  margin: 0 -20px;
 }
 
 .col-auto {
@@ -16,60 +17,72 @@
 
 .col-1 {
   flex: 0 0 8.3333%;
-  max-width: 8.3333%;
+  max-width: calc(8.3333% - 40px);
+  margin: 0 20px;
 }
 
 .col-2 {
   flex: 0 0 16.6666%;
-  max-width: 16.6666%;
+  max-width: calc(16.6666% - 40px);
+  margin: 0 20px;
 }
 
 .col-3 {
   flex: 0 0 25%;
-  max-width: 25%;
+  max-width: calc(25% - 40px);
+  margin: 0 20px;
 }
 
 .col-4 {
   flex: 0 0 33.3333%;
-  max-width: 33.3333%;
+  max-width: calc(33.3333% - 40px);
+  margin: 0 20px;
 }
 
 .col-5 {
   flex: 0 0 41.6666%;
-  max-width: 41.6666%;
+  max-width: calc(41.6666% - 40px);
+  margin: 0 20px;
 }
 
 .col-6 {
   flex: 0 0 50%;
-  max-width: 50%;
+  max-width: calc(50% - 40px);
+  margin: 0 20px;
 }
 
 .col-7 {
   flex: 0 0 58.3333%;
-  max-width: 58.3333%;
+  max-width: calc(58.3333% - 40px);
+  margin: 0 20px;
 }
 
 .col-8 {
   flex: 0 0 66.6666%;
-  max-width: 66.6666%;
+  max-width: calc(66.6666% - 40px);
+  margin: 0 20px;
 }
 
 .col-9 {
   flex: 0 0 75%;
-  max-width: 75%;
+  max-width: calc(75% - 40px);
+  margin: 0 20px;
 }
 
 .col-10 {
   flex: 0 0 83.3333%;
-  max-width: 83.3333%;
+  max-width: calc(83.3333% - 40px);
+  margin: 0 20px;
 }
 
 .col-11 {
   flex: 0 0 91.6666%;
-  max-width: 91.6666%;
+  max-width: calc(91.6666% - 40px);
+  margin: 0 20px;
 }
 
 .col-12 {
   flex: 0 0 100%;
-  max-width: 100%;
+  max-width: calc(100% - 40px);
+  margin: 0 20px;
 }

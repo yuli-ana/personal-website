@@ -1,0 +1,14 @@
+.btn {
+  background-color: $accent;
+  border: unset;
+  height: 45px;
+  color: $main-light;
+  border-radius: 30px;
+  text-transform: capitalize;
+
+  &__menu {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,25 @@
+.nav {
+  margin-top: 30px;
+
+  .col-9.row {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    background-color: $accent;
+    border-radius: 30px;
+  }
+
+  &__item {
+    a {
+      text-transform: capitalize;
+      padding: 10px;
+    }
+  }
+}

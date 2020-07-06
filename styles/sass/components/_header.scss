@@ -1,3 +1,47 @@
 .header {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
+  @include centerFlex();
+  text-align: center;
+
+  h1 {
+    margin: 60px 0 10px;
+    font-weight: bold;
+    font-size: 3.6rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+
+  &__image {
+    &.row {
+      justify-content: center;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__icons {
+    margin: 35px 0 60px;
+  }
+
+  &__button {
+    &.row {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    a {
+      color: #a3a3a3;
+      padding: 0 20px;
+      font-size: 2.2rem;
+    }
+  }
 }
