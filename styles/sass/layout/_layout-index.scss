@@ -1,11 +1,17 @@
 .wrapper {
   max-width: 1200px;
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .row {
   display: flex;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
 }
 
 .col-1 {
