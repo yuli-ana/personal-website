@@ -5,41 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Prata&family=Roboto&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/5dbe99caa8.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <div class="wrapper">
-                <!-- row -->
+
+    <!-- navigation -->
+    <nav>
+        <div class="wrapper">
+            <div class="nav">
                 <div class="row">
-                    <div class="col-1">
-                        <button><i class="fas fa-bars"></i></button>
-                    </div>
-                    <div class="col-7">
-                        <nav>
-                            <ul class="row">
-                                <li class="col-auto"><a href="#main">main</a></li>
-                                <li class="col-auto"><a href="#about">about</a></li>
-                                <li class="col-auto"><a href="#experience">experience</a></li>
-                                <li class="col-auto"><a href="#portfolio">portfolio</a></li>
-                                <li class="col-auto"><a href="#contacts">contacts</a></li>
+                    <div class="col-9 row">
+                        <div class="col-auto">
+                            <button class="btn btn__menu"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="col-11">
+                            <ul class="nav__list">
+                                <li class="nav__item col-2"><a href="#main">main</a></li>
+                                <li class="nav__item col-2"><a href="#about">about</a></li>
+                                <li class="nav__item col-2"><a href="#experience">experience</a></li>
+                                <li class="nav__item col-2"><a href="#portfolio">portfolio</a></li>
+                                <li class="nav__item col-2"><a href="#contacts">contacts</a></li>
                             </ul>
-                        </nav>
+                        </div>
                     </div>
                 </div>
-                <!--  -->
-                <div>
-                    <img src="" alt="">
-                    <h1>Yuliana Hazda</h1>
-                    <p>Front-end developer</p>
-                    <ul>
-                        <li><a href="https://twitter.com/yulianahazda"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/yuliana-hazda-b0ab711a8/"><i
-                                    class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <header>
+        <div class="wrapper">
+            <div class="header">
+                <div class="col col-4">
+                    <div class="header__image row">
+                        <img class="col-6" src="./assets/portfolio-2.jpg" alt="">
+                    </div>
+                    <div>
+                        <h1>Yuliana Hazda</h1>
+                        <h2>Front-end Developer</h2>
+                    </div>
+                    <div class="header__icons">
+                        <ul class="header__list">
+                            <li class="header__item"><a href="https://twitter.com/yulianahazda" target="_blank"
+                                    rel="noreferrer noopener"><i class="fab fa-twitter"></i></a></li>
+                            <li class="header__item"><a href="https://www.linkedin.com/in/yuliana-hazda-b0ab711a8/"
+                                    target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__button row">
+                        <button class="col-6 btn btn__resume">resume</button>
+                    </div>
                 </div>
             </div>
         </div>
