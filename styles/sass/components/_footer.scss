@@ -1,0 +1,34 @@
+@import "form";
+
+.footer {
+  color: $main-light;
+  padding: 40px 5%;
+  background-color: $accent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  transition: 0.3s;
+  overflow: hidden;
+  height: 100%;
+  transform: translate3d(-100.5%, 0, 0);
+
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    p {
+      margin: 0;
+      font-weight: light;
+    }
+  }
+
+  &__contact {
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
