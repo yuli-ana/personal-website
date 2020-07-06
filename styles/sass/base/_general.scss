@@ -34,3 +34,27 @@ button {
 .hide {
   display: none;
 }
+
+.offcanvas__wrap {
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+}
+
+.footer.offcanvas__visible {
+  transform: translate3d(0, 0, 0);
+}
+
+.wrap__right {
+  transform: translate3d(40%, 0, 0);
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+}
