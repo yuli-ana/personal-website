@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Prata&family=Roboto&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins&family=Prata&family=Roboto&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/5dbe99caa8.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
@@ -14,62 +14,142 @@
 
 <body>
 
-    <!-- navigation -->
-    <nav>
-        <div class="wrapper">
-            <div class="nav">
-                <div class="row">
-                    <div class="col-9 row">
-                        <div class="col-auto">
-                            <button class="btn btn__menu"><i class="fas fa-times"></i></button>
-                        </div>
-                        <div class="col-11">
-                            <ul class="nav__list">
-                                <li class="nav__item col-2"><a href="#main">main</a></li>
-                                <li class="nav__item col-2"><a href="#about">about</a></li>
-                                <li class="nav__item col-2"><a href="#experience">experience</a></li>
-                                <li class="nav__item col-2"><a href="#portfolio">portfolio</a></li>
-                                <li class="nav__item col-2"><a href="#contacts">contacts</a></li>
-                            </ul>
+    <div class="parent">
+        <!-- navigation -->
+        <div class="offcanvas__wrap">
+            <nav>
+                <div class="wrapper">
+                    <div class="nav">
+                        <div class="row">
+                            <div class="col-9 row">
+                                <div class="col-auto">
+                                    <button class="btn btn__menu"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="col-11">
+                                    <ul class="nav__list">
+                                        <li class="nav__item col-2"><a href="#main">main</a></li>
+                                        <li class="nav__item col-2"><a href="#about">about</a></li>
+                                        <li class="nav__item col-2"><a href="#experience">experience</a></li>
+                                        <li class="nav__item col-2"><a href="#portfolio">portfolio</a></li>
+                                        <li class="nav__item col-2"><a href="#contacts">contacts</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </nav>
+            </nav>
 
-    <!-- header -->
-    <header>
-        <div class="wrapper">
-            <div class="header">
-                <div class="col col-4">
-                    <div class="header__image row">
-                        <img class="col-6" src="./assets/portfolio-2.jpg" alt="">
-                    </div>
-                    <div>
-                        <h1>Yuliana Hazda</h1>
-                        <h2>Front-end Developer</h2>
-                    </div>
-                    <div class="header__icons">
-                        <ul class="header__list">
-                            <li class="header__item"><a href="https://twitter.com/yulianahazda" target="_blank"
-                                    rel="noreferrer noopener"><i class="fab fa-twitter"></i></a></li>
-                            <li class="header__item"><a href="https://www.linkedin.com/in/yuliana-hazda-b0ab711a8/"
-                                    target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="header__button row">
-                        <button class="col-6 btn btn__resume">resume</button>
+            <!-- header -->
+            <header>
+                <div class="wrapper">
+                    <div class="header">
+                        <div class="col col-4">
+                            <div class="header__image row">
+                                <img class="col-6" src="./assets/portfolio-2.jpg" alt="">
+                            </div>
+                            <div>
+                                <h1>Yuliana Hazda</h1>
+                                <h2>Front-end Developer</h2>
+                            </div>
+                            <div class="header__icons">
+                                <ul class="header__list">
+                                    <li class="header__item"><a href="https://twitter.com/yulianahazda" target="_blank"
+                                            rel="noreferrer noopener"><i class="fab fa-twitter"></i></a></li>
+                                    <li class="header__item"><a
+                                            href="https://www.linkedin.com/in/yuliana-hazda-b0ab711a8/" target="_blank"
+                                            rel="noreferrer noopener"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__button row">
+                                <button class="col-6 btn btn__resume">resume</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="scroll__indicator">
+                    <div class="dots"></div>
+                </div>
+            </header>
+
         </div>
-    </header>
+        <button class="btn btn__contact">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px"
+                height="214px">
+                <path fill-rule="evenodd" fill="rgb(95, 158, 160)"
+                    d="M37.986,141.782 C17.296,118.013 20.556,127.799 10.392,121.783 C10.332,152.499 7.895,183.560 9.599,214.014 C12.523,199.744 11.775,178.588 15.277,164.938 C18.466,150.582 25.904,143.732 37.986,141.782 L37.986,141.782 Z" />
+                <path fill-rule="evenodd" fill="rgb(95, 158, 160)"
+                    d="M37.580,72.194 C16.845,95.955 20.111,86.172 9.926,92.187 C9.866,61.480 7.424,30.430 9.131,-0.014 C12.062,14.250 11.312,35.400 14.822,49.046 C18.018,63.397 25.472,70.245 37.580,72.194 L37.580,72.194 Z" />
+                <path fill-rule="evenodd" fill="rgb(95, 158, 160)"
+                    d="M40.000,72.000 C62.091,72.000 80.000,87.670 80.000,107.000 C80.000,126.330 62.091,142.000 40.000,142.000 C17.909,142.000 0.000,126.330 0.000,107.000 C0.000,87.670 17.909,72.000 40.000,72.000 Z" />
+            </svg>
+        </button>
+
+        <button class="btn btn__about">
+            <span>A</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px"
+                height="80px">
+                <path fill-rule="evenodd" fill="rgb(95, 158, 160)"
+                    d="M40.000,-0.000 C62.091,-0.000 80.000,17.909 80.000,40.000 C80.000,62.091 62.091,80.000 40.000,80.000 C17.909,80.000 -0.000,62.091 -0.000,40.000 C-0.000,17.909 17.909,-0.000 40.000,-0.000 Z" />
+            </svg>
+        </button>
+    </div>
 
 
     <main></main>
-    <footer></footer>
+
+    <footer>
+        <div class="footer">
+            <div class="row row--column">
+                <form class="col-12 form" action="">
+                    <h2>Contact</h2>
+                    <div class="border">
+                        <label class="sr-only" for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="name" required>
+                    </div>
+                    <div class="border">
+                        <label class="sr-only" for="">Email</label>
+                        <input type="email" name="email" id="email" placeholder="e-mail" required>
+                    </div>
+                    <div class="border">
+                        <textarea name="massage" placeholder="Message"></textarea>
+                    </div>
+                    <button class="btn btn__send" type="submit">send</button>
+                </form>
+
+                <div class="col-12">
+                    <h2>Keep in touch</h2>
+                    <ul class="footer__list">
+                        <li class="row footer__item">
+                            <div class="col-4">
+                                <p class="footer__contact">email</p>
+                            </div>
+                            <div class="col-8">
+                                <p>yulianahazda@gmail.com</p>
+                            </div>
+                        </li>
+                        <li class="row footer__item">
+                            <div class="col-4">
+                                <p class="footer__contact">phone</p>
+                            </div>
+                            <div class="col-8">
+                                <p>+1(647)-777-8888</p>
+                            </div>
+                        </li>
+                        <li class="row footer__item">
+                            <div class="col-4">
+                                <p class="footer__contact">website</p>
+                            </div>
+                            <div class="col-8">
+                                <a href="https://yuliana.dev/">yuliana.dev</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
