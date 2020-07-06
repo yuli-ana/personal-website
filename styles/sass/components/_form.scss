@@ -1,1 +1,27 @@
-/* No CSS */
+form {
+  .form {
+    margin-bottom: 50px;
+  }
+
+  .border {
+    border-bottom: 1px solid $main-light;
+  }
+
+  input,
+  textarea {
+    text-transform: capitalize;
+    background-color: unset;
+    border: unset;
+    color: $main-light;
+    padding: 40px 0 15px;
+    width: 100%;
+  }
+
+  input[type="email"] {
+    text-transform: lowercase;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
