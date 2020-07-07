@@ -17,12 +17,33 @@ portfolio.toggleContact = () => {
     })
 }
 
+portfolio.scroll = () => {
+    $('.btn__about').on('click', function() {
+        $('html,body').animate({
+            scrollTop: $('.about').offset().top},
+            'slow'); 
+    });
+}
+
+
+// portfolio.chart = () => {
+//     AmCharts.makeChart("chart", {
+//         "type": "pie",
+//         "titleField": "title",
+//         "valueField": "value",
+//         "labelRadius": -130,
+//         "radius": "42%",
+//         "innerRadius": "60%",
+//         "labelText": "[[title]]"
+//       });
+// }
 
 portfolio.init = function(){
     this.toggleMenu();
     this.toggleContact();
+    this.scroll();
+    this.chart();
 }
-
 
 
 $(function(){

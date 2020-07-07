@@ -288,8 +288,7 @@ img {
 
 h1,
 h2,
-h3,
-h4 p {
+h4 {
   margin: 0;
 }
 
@@ -341,7 +340,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   overflow-x: hidden;
 }
@@ -739,6 +738,71 @@ body {
   color: #a3a3a3;
   padding: 0 20px;
   font-size: 2.2rem;
+}
+
+.about {
+  height: 100vh;
+  padding: 60px 0;
+}
+
+.about .row {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.about h2 {
+  margin-bottom: 40px;
+}
+
+.about__intro {
+  margin-bottom: 70px;
+}
+
+.about__skills {
+  margin-bottom: 70px;
+}
+
+.about__skills .row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about__skills .col-2 {
+  margin: 20px;
+  text-align: center;
+}
+
+.about__skills h3 {
+  font-size: 1.3rem;
+  margin: unset;
+}
+
+.about__personal {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 40px;
+  background-color: cadetblue;
+  border-radius: 10px;
+}
+
+.about__personal ul {
+  margin-bottom: 30px;
+}
+
+.about__personal ul::last-child {
+  margin-bottom: 0;
+}
+
+.about__personal h3 {
+  color: #ffffff;
+}
+
+.about__personal .courses__list .courses__item {
+  margin-bottom: 20px;
+}
+
+.about__personal .courses__list .courses__item a {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 form .form {

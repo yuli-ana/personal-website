@@ -1,0 +1,62 @@
+.about {
+  height: 100vh;
+  padding: 60px 0;
+
+  .row {
+    align-items: flex-start;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  &__intro {
+    margin-bottom: 70px;
+  }
+
+  &__skills {
+    margin-bottom: 70px;
+    .row {
+      flex-wrap: wrap;
+    }
+
+    .col-2 {
+      margin: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin: unset;
+    }
+  }
+
+  &__personal {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    background-color: $accent;
+    border-radius: 10px;
+
+    ul {
+      margin-bottom: 30px;
+
+      &::last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h3 {
+      color: $main-light;
+    }
+
+    .courses__list {
+      .courses__item {
+        margin-bottom: 20px;
+
+        a {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+}
