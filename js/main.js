@@ -25,19 +25,6 @@ portfolio.scroll = () => {
     });
 }
 
-
-// portfolio.chart = () => {
-//     AmCharts.makeChart("chart", {
-//         "type": "pie",
-//         "titleField": "title",
-//         "valueField": "value",
-//         "labelRadius": -130,
-//         "radius": "42%",
-//         "innerRadius": "60%",
-//         "labelText": "[[title]]"
-//       });
-// }
-
 portfolio.init = function(){
     this.toggleMenu();
     this.toggleContact();
