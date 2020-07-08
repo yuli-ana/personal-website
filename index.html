@@ -18,30 +18,30 @@
         <!-- navigation -->
         <div class="offcanvas__wrap">
             <nav>
-                <div class="wrapper">
-                    <div class="nav">
-                        <div class="row">
-                            <div class="col-9 row">
-                                <div class="col-auto">
-                                    <button class="btn btn__menu"><i class="fas fa-times"></i></button>
-                                </div>
-                                <div class="col-11">
-                                    <ul class="nav__list">
-                                        <li class="nav__item col-2"><a href="#main">main</a></li>
-                                        <li class="nav__item col-2"><a href="#about">about</a></li>
-                                        <li class="nav__item col-2"><a href="#experience">experience</a></li>
-                                        <li class="nav__item col-2"><a href="#portfolio">portfolio</a></li>
-                                        <li class="nav__item col-2"><a href="#contacts">contacts</a></li>
-                                    </ul>
-                                </div>
+                <!-- <div class="wrapper"> -->
+                <div class="nav">
+                    <div class="row">
+                        <div class="col-9 row">
+                            <div class="col-auto">
+                                <button class="btn btn__menu"><i class="fas fa-bars"></i></button>
+                            </div>
+                            <div class="col-11">
+                                <ul class="nav__list">
+                                    <li class="nav__item col-2"><a href="#main">main</a></li>
+                                    <li class="nav__item col-2"><a href="#about">about</a></li>
+                                    <li class="nav__item col-2"><a href="#experience">experience</a></li>
+                                    <li class="nav__item col-2"><a href="#portfolio">portfolio</a></li>
+                                    <li class="nav__item col-2"><a href="#contacts">contacts</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- </div> -->
             </nav>
 
             <!-- header -->
-            <header>
+            <header id="header">
                 <div class="wrapper">
                     <div class="header">
                         <div class="col col-4">
@@ -50,7 +50,7 @@
                             </div>
                             <div>
                                 <h1>Yuliana Hazda</h1>
-                                <h2>Front-end Developer</h2>
+                                <h2>Front-End Developer</h2>
                             </div>
                             <div class="header__icons">
                                 <ul class="header__list">
@@ -75,6 +75,7 @@
 
         </div>
         <button class="btn btn__contact">
+            <span class="scroll__hint scroll__hint--right">c</span>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px"
                 height="214px">
                 <path fill-rule="evenodd" fill="rgb(95, 158, 160)"
@@ -87,7 +88,7 @@
         </button>
 
         <button class="btn btn__about">
-            <span>A</span>
+            <span class="scroll__hint scroll__hint--left">a</span>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px"
                 height="80px">
                 <path fill-rule="evenodd" fill="rgb(95, 158, 160)"
@@ -98,7 +99,7 @@
 
 
     <main>
-        <section>
+        <section id="about">
             <div class="wrapper">
                 <div class="about">
                     <div class="row">
@@ -116,7 +117,7 @@
                                 <ul class="row about__skills--list">
                                     <li class="col-2 skills__item">
                                         <h3>HTML5</h3>
-                                        <p id="chart" class="chart chart__1">
+                                        <div id="chart" class="chart chart__1">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -134,11 +135,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>CCS3</h3>
-                                        <p class="chart chart__2">
+                                        <div class="chart chart__2">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -156,11 +157,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>SCSS</h3>
-                                        <p class="chart chart__3">
+                                        <div class="chart chart__3">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -178,11 +179,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>Javascript</h3>
-                                        <p class="chart chart__4">
+                                        <div class="chart chart__4">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -200,11 +201,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>React</h3>
-                                        <p class="chart chart__5">
+                                        <div class="chart chart__5">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -222,11 +223,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>jQuery</h3>
-                                        <p class="chart chart__6">
+                                        <div class="chart chart__6">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -244,11 +245,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>Firebase</h3>
-                                        <p class="chart chart__7">
+                                        <div class="chart chart__7">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -266,11 +267,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>Git</h3>
-                                        <p class="chart chart__8">
+                                        <div class="chart chart__8">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -288,11 +289,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>Github</h3>
-                                        <p class="chart chart__9">
+                                        <div class="chart chart__9">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -310,11 +311,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>Vscode</h3>
-                                        <p class="cchart har_t_10">
+                                        <div class="chart chart__10">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -332,11 +333,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>Accesibility</h3>
-                                        <p class="cchart har_t_11">
+                                        <div class="chart chart__11">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -354,11 +355,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>RWD</h3>
-                                        <p class="cchart har_t_12">
+                                        <div class="chart chart__12">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -376,11 +377,11 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                     <li class="col-2 skills__item">
                                         <h3>API's</h3>
-                                        <p class="cchart har_t_13">
+                                        <div class="chart chart__13">
                                             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="80"
                                                 height="80" xmlns="http://www.w3.org/2000/svg">
                                                 <circle class="circle-chart__background" stroke="#efefef"
@@ -398,7 +399,7 @@
                                                         font-size="2"></text>
                                                 </g>
                                             </svg>
-                                        </p>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -407,21 +408,36 @@
                             <div class="about__courses">
                                 <h3>Courses</h3>
                                 <ul class="courses__list">
-                                    <li class="courses__item">
-                                        <a href="https://frontendmasters.com/courses/javascript-hard-parts-v2/"
-                                            target="_blank" rel="noreferrer noopener">JavaScript:
-                                            The Hard Parts, v2 created by Will Sentance</a>
+                                    <li class="courses__item row">
+                                        <div class="col-2">
+                                            <i class="fas fa-laptop"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <a href="https://frontendmasters.com/courses/javascript-hard-parts-v2/"
+                                                target="_blank" rel="noreferrer noopener">JavaScript:
+                                                The Hard Parts, v2 created by Will Sentance</a>
+                                        </div>
                                     </li>
-                                    <li class="courses__item">
-                                        <a href="https://frontendmasters.com/courses/js-fundamentals-to-functional/"
-                                            target="_blank" rel="noreferrer noopener">JavaScript:
-                                            From Fundamentals to Functional JS created by Bianca Gandolfo</a>
+                                    <li class="courses__item row">
+                                        <div class="col-2">
+                                            <i class="fas fa-laptop"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <a href="https://frontendmasters.com/courses/js-fundamentals-to-functional/"
+                                                target="_blank" rel="noreferrer noopener">JavaScript:
+                                                From Fundamentals to Functional JS created by Bianca Gandolfo</a>
+                                        </div>
 
                                     </li>
-                                    <li class="courses__item">
-                                        <a href="https://beginnerjavascript.com/" target="_blank"
-                                            rel="noreferrer noopener">Beginner JavaScript Master Package
-                                            (BJS2) created by Wes Bos</a>
+                                    <li class="courses__item row">
+                                        <div class="col-2">
+                                            <i class="fas fa-laptop"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <a href="https://beginnerjavascript.com/" target="_blank"
+                                                rel="noreferrer noopener">Beginner JavaScript Master Package
+                                                (BJS2) created by Wes Bos</a>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -464,13 +480,101 @@
                 </div>
             </div>
         </section>
+        <section id="experience" class="experience">
+            <div class="wrapper">
+                <div class="experience__work">
+                    <div>
+                        <h2>Work Experience</h2>
+                        <table class="table table__experience">
+                            <tr class="row">
+                                <td class="experience__date col-2">2016 - 2019</td>
+                                <td class="col-2">Majesty's Pleasure</td>
+                                <td class="col-2">Nail Aesthetician</td>
+                                <td class="experience__info col-6">
+                                    During my position at Majesty's Pleasure, I worked closely with a team to ensure
+                                    that we
+                                    provide
+                                    equivalent customer services. Having great creativity skills helped to build and
+                                    maintain
+                                    client
+                                    relationships through exceptional customer service.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="experience__date col-2">2019 - 2020</td>
+                                <td class="col-2">Ritual Hair Skin Beauty</td>
+                                <td class="col-2">Nail Aesthetician</td>
+                                <td class="experience__info col-6">I was delivering high-quality service to
+                                    customers.
+                                    Assisted in
+                                    promoting the spa’s
+                                    retail
+                                    offerings by recommending a variety of care products.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="experience__date col-2">2015 - 2016</td>
+                                <td class="col-2">UniCall Central and Eastern Europe</td>
+                                <td class="col-2">Call Center Operator</td>
+                                <td class="experience__info col-6">I learnt how to identify client needs and to find
+                                    quickly creative
+                                    solutions/alternatives to
+                                    issues. Fluency in multiple languages helped me to collaborate with others and
+                                    contribute
+                                    more
+                                    to product development. In addition, I have excellent organizational skills that
+                                    allowed
+                                    to
+                                    enhance work efficiency but also satisfy more clients requests.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <section id="education" class="education">
+                    <div class="education__info">
+                        <h2>Education</h2>
+                        <table class="table table__education">
+                            <tr class="row">
+                                <td class="experience__date  col-2">(2012 - 2015)</td>
+                                <td class="col-4">
+                                    <p>University of Information Technology and Management in Rzeszow</p>
+                                    <p class="education__degree">Bachelor's degree in a field Hotel, Motel, and
+                                        Restaurant Management</p>
+                                </td>
+                                <td class="experience__info col-6">Lorem ipsum, dolor sit amet
+                                    consectetur adipisicing elit.
+                                    Quos, vero! Velit magnam beatae dolorum minima necessitatibus repudiandae,
+                                    voluptatem cupiditate. Laboriosam.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="experience__date col-2">(2019 - 2020)</td>
+                                <td class="col-4">
+                                    <p>Juno College of Technology</p>
+                                    <p class="education__degree">Post secondary education</p>
+                                </td>
+                                <td class="experience__info col-6">Juno is a Private Career College
+                                    located in downtown Toronto
+                                    that runs
+                                    nine-week
+                                    full-time
+                                    bootcamps to train web developers on the most up-to-date skills, including
+                                    HTML5,
+                                    CSS3,
+                                    responsive design, JavaScript, jQuery, APIs and React</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <div class="footer">
             <div class="row row--column">
                 <form class="col-12 form" action="">
-                    <h2>Contact</h2>
+                    <div class="row row--between">
+                        <h2 class="col-auto">Contact</h2>
+                        <button class="col-auto btn btn__circle"><i class="far fa-circle"></i></button>
+                    </div>
                     <div class="border">
                         <label class="sr-only" for="name">Name:</label>
                         <input type="text" name="name" id="name" placeholder="name" required>
