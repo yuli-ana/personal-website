@@ -1,0 +1,57 @@
+.portfolio {
+  min-height: 100vh;
+  @include centerFlex();
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    .col-4 {
+      height: 200px;
+      margin: 20px;
+    }
+
+    .image__container {
+      position: relative;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .overlay {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(95, 158, 160, 0);
+        transition: all 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      }
+
+      &:hover .overlay {
+        background-color: rgba(95, 158, 160, 1);
+        opacity: 1;
+      }
+
+      h3 {
+        margin: 0;
+        font-weight: normal;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  //   &__item {
+  //     box-shadow: 0px 0px 5px black;
+  //     border-radius: 10px;
+  //   }
+}
