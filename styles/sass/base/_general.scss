@@ -15,7 +15,8 @@ img {
 
 h1,
 h2,
-h4 {
+h4,
+p {
   margin: 0;
 }
 
@@ -30,8 +31,11 @@ button {
   padding: 0;
 }
 
-.hide {
-  display: none;
+.about,
+.experience {
+  @include centerFlex();
+  margin: 0 -20px;
+  min-height: 100vh;
 }
 
 .offcanvas__wrap {
@@ -48,12 +52,19 @@ button {
   transform: translate3d(40%, 0, 0);
 }
 
-span {
+.scroll__hint {
   position: absolute;
   top: 50%;
-  left: -25px;
   transform: translateY(-50%);
   color: #000;
-  font-size: 2rem;
   font-weight: bold;
+  font-size: 2rem;
+
+  &--right {
+    right: -25px;
+  }
+
+  &--left {
+    left: -25px;
+  }
 }

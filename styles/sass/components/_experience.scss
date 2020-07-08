@@ -1,0 +1,17 @@
+.experience {
+  font-size: 1.4rem;
+
+  &__work {
+    padding: 40px 0;
+    border-bottom: 1px solid $accent-secondary;
+  }
+
+  &__date,
+  &__info {
+    color: $accent-secondary;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}

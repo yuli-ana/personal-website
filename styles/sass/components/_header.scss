@@ -1,7 +1,11 @@
 .header {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   @include centerFlex();
   text-align: center;
+
+  &.flex--start {
+    justify-content: flex-start;
+  }
 
   h1 {
     margin: 60px 0 10px;
@@ -39,7 +43,7 @@
     display: inline-block;
 
     a {
-      color: #a3a3a3;
+      color: $accent-secondary;
       padding: 0 20px;
       font-size: 2.2rem;
     }
