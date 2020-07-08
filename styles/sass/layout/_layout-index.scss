@@ -1,6 +1,6 @@
 .wrapper {
   max-width: 1200px;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -10,6 +10,10 @@
 
   &--column {
     flex-direction: column;
+  }
+
+  &--between {
+    justify-content: space-between;
   }
 }
 

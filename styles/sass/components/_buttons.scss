@@ -1,5 +1,5 @@
 .btn {
-  background-color: $accent;
+  background-color: $accent-primary;
   border: unset;
   height: 40px;
   color: $main-light;
@@ -10,6 +10,10 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+
+    &.hide {
+      display: none;
+    }
   }
 
   &__send {
@@ -21,7 +25,7 @@
 
   &__contact,
   &__about {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     background-color: unset;
@@ -35,5 +39,9 @@
   &__about {
     right: -40px;
     height: 80px;
+  }
+
+  &__circle {
+    font-size: 2.5rem;
   }
 }

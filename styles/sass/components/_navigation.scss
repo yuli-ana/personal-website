@@ -1,5 +1,8 @@
 .nav {
-  margin-top: 30px;
+  position: fixed;
+  width: 75%;
+  top: 20px;
+  left: 6%;
 
   .col-9.row {
     align-items: center;
@@ -12,8 +15,15 @@
     align-items: center;
     text-align: center;
     height: 50px;
-    background-color: $accent;
+    background-color: $accent-primary;
     border-radius: 30px;
+    // visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+
+    &.opacity {
+      opacity: 1;
+    }
   }
 
   &__item {

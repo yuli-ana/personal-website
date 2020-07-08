@@ -13,6 +13,13 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  &.left {
+    bottom: 50px;
+    left: 27%;
+    transform: unset;
+  }
+
   &::before {
     width: 12px;
     height: 12px;
