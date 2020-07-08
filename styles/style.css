@@ -288,7 +288,8 @@ img {
 
 h1,
 h2,
-h4 {
+h4,
+p {
   margin: 0;
 }
 
@@ -303,8 +304,19 @@ button {
   padding: 0;
 }
 
-.hide {
-  display: none;
+.about,
+.experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 -20px;
+  min-height: 100vh;
 }
 
 .offcanvas__wrap {
@@ -324,15 +336,22 @@ button {
           transform: translate3d(40%, 0, 0);
 }
 
-span {
+.scroll__hint {
   position: absolute;
   top: 50%;
-  left: -25px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #000;
-  font-size: 2rem;
   font-weight: bold;
+  font-size: 2rem;
+}
+
+.scroll__hint--right {
+  right: -25px;
+}
+
+.scroll__hint--left {
+  left: -25px;
 }
 
 html {
@@ -347,7 +366,7 @@ body {
 
 .wrapper {
   max-width: 1200px;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -363,6 +382,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.row--between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .col-auto {
@@ -470,7 +495,10 @@ body {
 }
 
 .nav {
-  margin-top: 30px;
+  position: fixed;
+  width: 75%;
+  top: 20px;
+  left: 6%;
 }
 
 .nav .col-9.row {
@@ -496,6 +524,12 @@ body {
   height: 50px;
   background-color: cadetblue;
   border-radius: 30px;
+  opacity: 0;
+  z-index: 10;
+}
+
+.nav__list.opacity {
+  opacity: 1;
 }
 
 .nav__item a {
@@ -519,6 +553,13 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.scroll__indicator.left {
+  bottom: 50px;
+  left: 27%;
+  -webkit-transform: unset;
+          transform: unset;
 }
 
 .scroll__indicator::before {
@@ -659,6 +700,10 @@ body {
   border-radius: 50%;
 }
 
+.btn__menu.hide {
+  display: none;
+}
+
 .btn__send {
   margin: 40px 0;
   background-color: #ffffff;
@@ -667,7 +712,7 @@ body {
 }
 
 .btn__contact, .btn__about {
-  position: absolute;
+  position: fixed;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -684,8 +729,12 @@ body {
   height: 80px;
 }
 
+.btn__circle {
+  font-size: 2.5rem;
+}
+
 .header {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -696,6 +745,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.header.flex--start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .header h1 {
@@ -740,23 +795,12 @@ body {
   font-size: 2.2rem;
 }
 
-.about {
-  height: 100vh;
-  padding: 60px 0;
-}
-
-.about .row {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
 .about h2 {
   margin-bottom: 40px;
 }
 
 .about__intro {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .about__skills {
@@ -769,13 +813,16 @@ body {
 }
 
 .about__skills .col-2 {
-  margin: 20px;
   text-align: center;
 }
 
 .about__skills h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: unset;
+}
+
+.about__languages li, .about__hobbies li {
+  margin: 10px 0;
 }
 
 .about__personal {
@@ -783,6 +830,12 @@ body {
   padding: 40px;
   background-color: cadetblue;
   border-radius: 10px;
+  font-size: 1.4rem;
+}
+
+.about__personal h3 {
+  color: #ffffff;
+  font-size: 2rem;
 }
 
 .about__personal ul {
@@ -793,16 +846,64 @@ body {
   margin-bottom: 0;
 }
 
-.about__personal h3 {
-  color: #ffffff;
+.about__personal .courses__list {
+  margin-bottom: 50px;
 }
 
 .about__personal .courses__list .courses__item {
   margin-bottom: 20px;
 }
 
+.about__personal .courses__list .courses__item:last-child {
+  margin-bottom: 0;
+}
+
+.about__personal .courses__list .courses__item.row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .about__personal .courses__list .courses__item a {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.chart {
+  margin: 15px 0;
+}
+
+.experience {
+  font-size: 1.4rem;
+}
+
+.experience__work {
+  padding: 40px 0;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.experience__date, .experience__info {
+  color: #a3a3a3;
+}
+
+.experience h2 {
+  margin-bottom: 20px;
+}
+
+.education {
+  padding: 40px 0;
+}
+
+.education__degree {
+  margin-top: 5px;
+  color: #a3a3a3;
+}
+
+.table__education tr, .table__experience tr {
+  margin-bottom: 25px;
+}
+
+.table__education tr:last-child, .table__experience tr:last-child {
+  margin-bottom: 0;
 }
 
 form .form {
@@ -821,6 +922,7 @@ form textarea {
   color: #ffffff;
   padding: 40px 0 15px;
   width: 100%;
+  outline: none;
 }
 
 form input[type="email"] {

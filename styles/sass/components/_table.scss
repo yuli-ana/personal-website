@@ -1,0 +1,11 @@
+.table {
+  &__education,
+  &__experience {
+    tr {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
