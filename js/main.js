@@ -1,53 +1,104 @@
 const portfolio = {};
-const buttonMenu = $('.btn__menu');
-const navList = $('.nav__list');
-const btnContact = $('.btn__contact');
+portfolio.scrollIndicator = $('.scroll__indicator');
+portfolio.scrollHint = $('.scroll__hint--left');
+portfolio.offCanvas = $('.offcanvas__wrap');
+portfolio.btnContact = $('.btn__contact');
+portfolio.btnCircle = $('.btn__circle');
+portfolio.buttonMenu = $('.btn__menu');
+portfolio.btnAbout = $('.btn__about');
+portfolio.navList = $('.nav__list');
+portfolio.btnSend = $('.btn__send');
+portfolio.header = $('.header');
+portfolio.footer = $('.footer');
+portfolio.active = $('#about');
+portfolio.form = $('.form');
+portfolio.html = $('html');
 
 
 portfolio.toggleMenu = function () {
-    buttonMenu.on('click', (e) => {
+    this.buttonMenu.on('click', (e) => {
         e.preventDefault();
-        navList.toggleClass('opacity');
+        this.navList.toggleClass('opacity');
     })
 }
 
-portfolio.openContact = () => {
-    btnContact.on('click', function () {
-        $('.offcanvas__wrap').addClass('wrap__right');
-        $('.footer').addClass('offcanvas__visible');
-        buttonMenu.addClass('hide');
-        $('.header').addClass('flex--start');
-        $('.scroll__indicator').addClass('left');
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+portfolio.openContactForm = function () {
+    this.btnContact.on('click', () => {
+        this.html.animate({ scrollTop: 0 }, "slow", () => {
+            this.footer.addClass('offcanvas__visible');
+            this.offCanvas.addClass('wrap__right');
+            this.buttonMenu.addClass('hide');
+            this.header.addClass('flex--start');
+            this.scrollIndicator.addClass('left');
+        });
+
+        console.log(this.footer);
     })
 }
 
-portfolio.closeContact = () => {
-    $('.btn__circle').on('click', function () {
-        $('.offcanvas__wrap').removeClass('wrap__right');
-        $('.footer').removeClass('offcanvas__visible');
-        buttonMenu.removeClass('hide');
-        $('.header').removeClass('flex--start');
-        $('.scroll__indicator').removeClass('left');
+portfolio.closeContactForm = function () {
+    this.btnCircle.on('click', () => {
+        this.offCanvas.removeClass('wrap__right');
+        this.footer.removeClass('offcanvas__visible');
+        this.buttonMenu.removeClass('hide');
+        this.header.removeClass('flex--start');
+        this.scrollIndicator.removeClass('left');
     })
 }
 
-portfolio.scroll = () => {
-    $('.btn__about').on('click', function () {
-        $('html,body').animate({
-            scrollTop: $('.about').offset().top
-        },
-            'slow');
-    });
+
+portfolio.handleButtonAbout = function () {
+    this.btnAbout.on('click', () => {
+        this.scrollHint.text(this.active.data('letter'));
+        if (this.active.length > 0) {
+            console.log(this.active);
+            this.html.animate({
+                scrollTop: this.active.offset().top,
+            },
+                'slow',
+                () => {
+                    this.active = this.active.next();
+                })
+        } else {
+            this.html.animate({
+                scrollTop: 0,
+            }, "fast", () => {
+                this.active = $('#about');
+                this.scrollHint.text('a');
+            })
+        }
+    })
 }
 
+portfolio.closeOnScroll = function () {
+    $(window).on('scroll', () => {
+        const scroll = $(window).scrollTop();
+        const footerHasClass = this.footer.hasClass('offcanvas__visible');
+        const offCanvasHasClass = this.offCanvas.hasClass('wrap__right');
+
+        if (scroll >= 100 && footerHasClass && offCanvasHasClass) {
+            this.footer.removeClass('offcanvas__visible');
+            this.offCanvas.removeClass('wrap__right');
+            this.header.removeClass('flex--start');
+            this.scrollIndicator.removeClass('left');
+        }
+    })
+}
+
+portfolio.submitForm = function () {
+    this.form.on('submit', (e) => {
+        e.preventDefault();
+    })
+    // Clear input values when user clicks close footer
+}
 
 portfolio.init = function () {
-    this.closeContact();
-    this.openContact();
+    this.handleButtonAbout();
+    this.closeContactForm();
+    this.openContactForm();
+    this.closeOnScroll();
+    this.submitForm();
     this.toggleMenu();
-    this.scroll();
-    this.chart();
 }
 
 
