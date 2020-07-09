@@ -1,4 +1,10 @@
 .about {
+  @include centerFlex();
+
+  .row {
+    align-items: flex-start;
+  }
+
   h2 {
     margin-bottom: 40px;
   }
@@ -9,6 +15,7 @@
 
   &__skills {
     margin-bottom: 70px;
+
     .row {
       flex-wrap: wrap;
     }
