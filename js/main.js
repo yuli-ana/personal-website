@@ -24,6 +24,7 @@ portfolio.toggleMenu = function () {
 
 portfolio.openContactForm = function () {
     this.btnContact.on('click', () => {
+
         this.html.animate({ scrollTop: 0 }, "slow", () => {
             this.footer.addClass('offcanvas__visible');
             this.offCanvas.addClass('wrap__right');
@@ -32,7 +33,7 @@ portfolio.openContactForm = function () {
             this.scrollIndicator.addClass('left');
         });
 
-        console.log(this.footer);
+    
     })
 }
 
