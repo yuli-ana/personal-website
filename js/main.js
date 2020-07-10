@@ -1,4 +1,6 @@
 const portfolio = {};
+
+// TODO: Refactor it. Move to portfolio.selectors
 portfolio.scrollIndicator = $('.scroll-indicator');
 portfolio.scrollHint = $('.scroll__hint--left');
 portfolio.offCanvas = $('.offcanvas__wrap');
@@ -17,49 +19,61 @@ portfolio.inputName = $('.input__name');
 portfolio.inputEmail = $('.input__email');
 
 
-portfolio.toggleMenu = function () {
+portfolio.addClickEventListeners = function () {
     this.buttonMenu.on('click', (e) => {
         e.preventDefault();
         this.navList.toggleClass('opacity');
-    })
-}
+    });
 
-portfolio.openContactForm = function () {
-    this.btnContact.on('click', () => {
-
-        this.html.animate({ scrollTop: 0 }, "slow", () => {
-            this.footer.addClass('offcanvas__visible');
-            this.offCanvas.addClass('offcanvas__wrap--right');
-            this.buttonMenu.addClass('hide');
-            this.header.addClass('flex--start');
-            this.scrollIndicator.addClass('scroll-indicator--left');
-        });
-
-
-    })
-}
-
-portfolio.closeContactForm = function () {
     this.btnCircle.on('click', () => {
         this.closeContactFormHandler();
     });
+
+    this.btnContact.on('click', () => {
+
+        if($(window).scrollTop() < 50) {
+            this.openContactFormHandler();
+        } else {
+            this.html.animate({ scrollTop: 0 }, "slow", () => {
+                this.openContactFormHandler();
+            });
+        }
+    });
 }
 
+/**
+ * Adds all necessary classes when modal closes
+ */
+portfolio.openContactFormHandler = function () {
+    this.footer.addClass('offcanvas__visible');
+    this.offCanvas.addClass('offcanvas__wrap--right');
+    this.buttonMenu.addClass('hide');
+    this.header.addClass('flex--start');
+    this.scrollIndicator.addClass('scroll-indicator--left');
+}
+
+/**
+ * Removes all necessary classes when closing contact form
+ */
 portfolio.closeContactFormHandler = function () {
     this.offCanvas.removeClass('offcanvas__wrap--right');
     this.footer.removeClass('offcanvas__visible');
     this.buttonMenu.removeClass('hide');
     this.header.removeClass('flex--start');
     this.scrollIndicator.removeClass('scroll-indicator--left');
+
+    // Hide successful message
     $('.form__success').hide();
 }
 
 
+/**
+ * Handles page navigation
+ */
 portfolio.handleButtonAbout = function () {
     this.btnAbout.on('click', () => {
         this.scrollHint.text(this.active.data('letter'));
         if (this.active.length > 0) {
-            console.log(this.active);
             this.html.animate({
                 scrollTop: this.active.offset().top,
             },
@@ -106,12 +120,10 @@ portfolio.submitForm = function () {
 }
 
 portfolio.init = function () {
+    this.addClickEventListeners();
     this.handleButtonAbout();
-    this.closeContactForm();
-    this.openContactForm();
     this.closeOnScroll();
     this.submitForm();
-    this.toggleMenu();
 }
 
 
