@@ -331,9 +331,9 @@ button {
           transform: translate3d(0, 0, 0);
 }
 
-.wrap__right {
-  -webkit-transform: translate3d(40%, 0, 0);
-          transform: translate3d(40%, 0, 0);
+.offcanvas__wrap--right {
+  -webkit-transform: translate3d(36%, 0, 0);
+          transform: translate3d(36%, 0, 0);
 }
 
 .scroll__hint {
@@ -546,7 +546,7 @@ body {
   padding: 10px;
 }
 
-.scroll__indicator {
+.scroll-indicator {
   width: 12px;
   margin: 0 auto;
   position: absolute;
@@ -557,21 +557,21 @@ body {
   opacity: 0.5;
 }
 
-.scroll__indicator::before, .scroll__indicator::after {
+.scroll-indicator::before, .scroll-indicator::after {
   content: "";
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.scroll__indicator.left {
+.scroll-indicator--left {
   bottom: 50px;
-  left: 27%;
+  left: 29%;
   -webkit-transform: unset;
           transform: unset;
 }
 
-.scroll__indicator::before {
+.scroll-indicator::before {
   width: 12px;
   height: 12px;
   border-radius: 10px;
@@ -580,7 +580,7 @@ body {
           animation: dot 3s infinite ease-in-out;
 }
 
-.scroll__indicator::after {
+.scroll-indicator::after {
   width: 7px;
   height: 7px;
   border-right: 1px solid #000;
@@ -594,11 +594,11 @@ body {
   opacity: 0.25;
 }
 
-.scroll__indicator > div {
+.scroll-indicator > div {
   display: block;
 }
 
-.scroll__indicator > div::before, .scroll__indicator > div::after {
+.scroll-indicator > div::before, .scroll-indicator > div::after {
   content: "";
   display: block;
   margin: 5px auto;
@@ -608,14 +608,14 @@ body {
           animation: dot 3s infinite ease-in-out;
 }
 
-.scroll__indicator > div::before {
+.scroll-indicator > div::before {
   width: 8px;
   height: 8px;
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
 }
 
-.scroll__indicator > div::after {
+.scroll-indicator > div::after {
   width: 6px;
   height: 6px;
   -webkit-animation-delay: 0.5s;
@@ -1185,36 +1185,47 @@ body {
   }
 }
 
-form .form {
+.form {
   margin-bottom: 50px;
 }
 
-form .border {
-  border-bottom: 1px solid #ffffff;
+.form__item {
+  margin-bottom: 16px;
 }
 
-form input,
-form textarea {
+.form input,
+.form textarea {
   text-transform: capitalize;
   background-color: unset;
   border: unset;
   color: #ffffff;
-  padding: 40px 0 15px;
+  padding: 15px 0;
   width: 100%;
   outline: none;
+  border-bottom: 1px solid #ffffff;
 }
 
-form input[type="email"] {
-  text-transform: lowercase;
+.form input:invalid,
+.form textarea:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-form textarea {
+.form textarea {
   resize: none;
+}
+
+.form__success {
+  display: none;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #0303033d;
 }
 
 .footer {
   color: #ffffff;
-  padding: 40px 5%;
+  padding: 40px 4%;
   background-color: cadetblue;
   position: absolute;
   top: 0;
@@ -1247,4 +1258,13 @@ form textarea {
 .footer__contact {
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }

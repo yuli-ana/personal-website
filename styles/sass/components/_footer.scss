@@ -2,7 +2,7 @@
 
 .footer {
   color: $main-light;
-  padding: 40px 5%;
+  padding: 40px 4%;
   background-color: $accent-primary;
   position: absolute;
   top: 0;
@@ -31,6 +31,11 @@
   &__contact {
     text-transform: capitalize;
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
   }
 
   // @include tablet-landscape {

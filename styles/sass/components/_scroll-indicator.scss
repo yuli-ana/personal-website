@@ -1,4 +1,4 @@
-.scroll__indicator {
+.scroll-indicator {
   width: 12px;
   margin: 0 auto;
   position: absolute;
@@ -14,9 +14,9 @@
     margin-right: auto;
   }
 
-  &.left {
+  &--left {
     bottom: 50px;
-    left: 27%;
+    left: 29%;
     transform: unset;
   }
 

@@ -1,10 +1,8 @@
-form {
-  .form {
-    margin-bottom: 50px;
-  }
+.form {
+  margin-bottom: 50px;
 
-  .border {
-    border-bottom: 1px solid $main-light;
+  &__item {
+    margin-bottom: 16px;
   }
 
   input,
@@ -13,16 +11,25 @@ form {
     background-color: unset;
     border: unset;
     color: $main-light;
-    padding: 40px 0 15px;
+    padding: 15px 0;
     width: 100%;
     outline: none;
-  }
+    border-bottom: 1px solid $main-light;
 
-  input[type="email"] {
-    text-transform: lowercase;
+    &:invalid {
+      box-shadow: none;
+    }
   }
 
   textarea {
     resize: none;
+  }
+
+  &__success {
+    display: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #0303033d;
   }
 }
