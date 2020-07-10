@@ -58,19 +58,26 @@ button {
 }
 
 .scroll__hint {
+  display: block;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #000;
   font-weight: bold;
   font-size: 2rem;
+  max-width: 1.35ch;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  letter-spacing: 1px;
 
   &--right {
-    right: -25px;
+    right: -10px;
+    transform: translate(110%, -50%);
   }
 
   &--left {
-    left: -25px;
+    left: -10px;
+    transform: translate(-110%, -50%);
   }
 }
 

@@ -86,7 +86,7 @@ portfolio.handleButtonAbout = function () {
                 scrollTop: 0,
             }, "fast", () => {
                 this.active = $('#about');
-                this.scrollHint.text('a');
+                this.scrollHint.text('About');
             })
         }
     })

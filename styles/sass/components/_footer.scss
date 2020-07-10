@@ -42,4 +42,18 @@
   //   padding: 40px 4%;
   //   width: 38px;
   // }
+
+  @include tablet-portrait-sm {
+    position: relative;
+    width: 100%;
+    transform: none;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1;
+
+    .btn__circle {
+      display: none;
+    }
+  }
 }
