@@ -7,7 +7,6 @@
 
   input,
   textarea {
-    text-transform: capitalize;
     background-color: unset;
     border: unset;
     color: $main-light;
@@ -18,6 +17,10 @@
 
     &:invalid {
       box-shadow: none;
+    }
+
+    &::placeholder {
+      color: $main-light;
     }
   }
 

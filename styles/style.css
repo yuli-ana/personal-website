@@ -293,6 +293,10 @@ p {
   margin: 0;
 }
 
+h2.section-title {
+  margin-bottom: 30px;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -315,7 +319,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 -20px;
   min-height: 100vh;
 }
 
@@ -377,6 +380,13 @@ body {
   max-width: 1200px;
   width: 70%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 650px) {
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 .row {
@@ -508,6 +518,7 @@ body {
   width: 75%;
   top: 20px;
   left: 6%;
+  z-index: 100;
 }
 
 .nav .col-9.row {
@@ -620,6 +631,12 @@ body {
   height: 6px;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+}
+
+@media only screen and (max-width: 650px) {
+  .scroll-indicator {
+    bottom: 60px;
+  }
 }
 
 @-webkit-keyframes dot {
@@ -742,6 +759,12 @@ body {
 
 .btn__circle {
   font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .btn__contact, .btn__about {
+    display: none;
+  }
 }
 
 .header {
@@ -903,6 +926,14 @@ body {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .about__skills__list .col-2 {
+    -ms-flex-preferred-size: 33.33333%;
+        flex-basis: 33.33333%;
+    max-width: calc(33.33333% - 40px);
+  }
+}
+
 .about h3 {
   font-size: 1.4rem;
   margin: unset;
@@ -919,6 +950,14 @@ body {
             flex: 0 0 25%;
     max-width: calc(25% - 40px);
     margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .about__languages, .about__hobbies {
+    display: block;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
@@ -966,6 +1005,14 @@ body {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .about__personal .courses__list .courses__item.row {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .about__personal .courses__list .courses__item a {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1004,6 +1051,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .about__personal {
+    display: block;
+  }
+}
+
 .about__languages ul {
   margin-bottom: 30px;
 }
@@ -1027,6 +1080,17 @@ body {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .about {
+    display: block;
+  }
+  .about__courses {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
 .chart {
   margin: 15px 0;
 }
@@ -1044,8 +1108,13 @@ body {
   color: #a3a3a3;
 }
 
-.experience h2 {
-  margin-bottom: 20px;
+@media only screen and (max-width: 650px) {
+  .experience__info {
+    margin-top: 20px;
+  }
+  .experience__date {
+    margin-bottom: 5px;
+  }
 }
 
 .education {
@@ -1057,12 +1126,49 @@ body {
   color: #a3a3a3;
 }
 
-.table__education tr, .table__experience tr {
+.table {
+  display: table;
+}
+
+.table__row {
+  display: table-row;
+}
+
+.table__row > div {
+  display: table-cell;
+  padding: 0 20px 20px;
+}
+
+.table__col--2 {
+  width: 16.66666%;
+}
+
+.table__col--4 {
+  width: 33.333333%;
+}
+
+.table__education .table__row, .table__experience .table__row {
   margin-bottom: 25px;
 }
 
-.table__education tr:last-child, .table__experience tr:last-child {
+.table__education .table__row:last-child, .table__experience .table__row:last-child {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .table {
+    display: block;
+  }
+  .table__row {
+    display: block;
+  }
+  .table__row > div {
+    display: block;
+    padding: 0 20px 0;
+  }
+  .table__col--2, .table__col--4 {
+    width: 100%;
+  }
 }
 
 .portfolio {
@@ -1127,17 +1233,22 @@ body {
 
 .portfolio__list .image__container .overlay__title {
   margin-bottom: 30px;
-}
-
-.portfolio__list .image__container .overlay__title h3 {
-  font-weight: normal;
-  font-size: 1.5rem;
-}
-
-.portfolio__list .image__container .overlay__title .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.portfolio__list .image__container .overlay__title i {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.portfolio__list .image__container .overlay__title h3 {
+  display: inline-block;
+  margin-top: -3px;
+  vertical-align: middle;
+  font-weight: normal;
+  font-size: 1.5rem;
 }
 
 .portfolio__list .image__container .overlay__list {
@@ -1185,6 +1296,26 @@ body {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .portfolio__list.row {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow: auto;
+  }
+  .portfolio__list.row .col-4:last-child {
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .portfolio {
+    min-height: unset;
+  }
+}
+
 .form {
   margin-bottom: 50px;
 }
@@ -1195,7 +1326,6 @@ body {
 
 .form input,
 .form textarea {
-  text-transform: capitalize;
   background-color: unset;
   border: unset;
   color: #ffffff;
@@ -1209,6 +1339,26 @@ body {
 .form textarea:invalid {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form input::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #ffffff;
 }
 
 .form textarea {

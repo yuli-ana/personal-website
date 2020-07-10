@@ -2,6 +2,11 @@
   max-width: 1200px;
   width: 70%;
   margin: 0 auto;
+
+  @include tablet-portrait-sm {
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 .row {

@@ -59,6 +59,10 @@
       animation-delay: 0.5s;
     }
   }
+
+  @include tablet-portrait-sm {
+    bottom: 60px;
+  }
 }
 
 @keyframes dot {

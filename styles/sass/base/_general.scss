@@ -20,6 +20,12 @@ p {
   margin: 0;
 }
 
+h2 {
+  &.section-title {
+    margin-bottom: 30px;
+  }
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -34,7 +40,6 @@ button {
 .about,
 .experience {
   @include centerFlex();
-  margin: 0 -20px;
   min-height: 100vh;
 }
 
@@ -77,11 +82,3 @@ button {
 .fa-chevron-circle-right {
   font-size: 1.8rem;
 }
-
-// .fa-html5 {
-//   color: #dd4b25;
-// }
-
-// .fa-css3 {
-//   color: #2ba9d9;
-// }
