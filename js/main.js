@@ -115,10 +115,6 @@ portfolio.submitForm = function () {
             form.trigger("reset");
             $('.form__success').fadeIn(500);
         });
-
-        this.inputName.text('');
-        this.inputEmail.text('');
-
     })
 }
 
