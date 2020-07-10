@@ -939,6 +939,12 @@ body {
   margin: 35px 0 60px;
 }
 
+@media only screen and (max-width: 650px) {
+  .header__icons {
+    margin: 35px 0;
+  }
+}
+
 .header__button.row {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
