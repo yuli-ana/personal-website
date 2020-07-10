@@ -94,6 +94,11 @@ button {
   @include fontSize(18);
 }
 
+.fa-download {
+  @include fontSize(14);
+  margin-right: 10px;
+}
+
 .fa-linkedin-in:hover,
 .fa-linkedin-in:focus,
 .fa-github:hover,

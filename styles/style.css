@@ -380,6 +380,11 @@ button {
   font-size: 1.8rem;
 }
 
+.fa-download {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
 .fa-linkedin-in:hover,
 .fa-linkedin-in:focus,
 .fa-github:hover,
@@ -823,6 +828,22 @@ body {
 
 .btn__menu.hide {
   display: none;
+}
+
+.btn__resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn__resume:hover {
+  background-color: rgba(95, 158, 160, 0.8);
 }
 
 .btn__send {

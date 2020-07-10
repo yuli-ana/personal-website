@@ -18,6 +18,16 @@
     }
   }
 
+  &__resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: rgba(95, 158, 160, 0.8);
+    }
+  }
+
   &__send {
     margin: 40px 0;
     background-color: $main-light;
