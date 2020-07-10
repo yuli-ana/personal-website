@@ -2,7 +2,17 @@
   @include centerFlex();
 
   .row {
-    align-items: flex-start;
+    &--column {
+      flex-direction: unset;
+
+      @include tablet-landscape-sm {
+        flex-direction: column;
+      }
+    }
+
+    @include tablet-landscape {
+      align-items: center;
+    }
   }
 
   h2 {
@@ -20,14 +30,21 @@
       flex-wrap: wrap;
     }
 
-    .col-2 {
-      text-align: center;
-    }
+    &__list {
+      .col-2 {
+        text-align: center;
 
-    h3 {
-      font-size: 1.4rem;
-      margin: unset;
+        @include tablet-landscape {
+          flex-basis: 20%;
+          max-width: calc(20% - 40px);
+        }
+      }
     }
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin: unset;
   }
 
   &__languages,
@@ -35,6 +52,16 @@
     li {
       margin: 10px 0;
     }
+
+    @include tablet-landscape-sm {
+      flex: 0 0 25%;
+      max-width: calc(25% - 40px);
+      margin: 0 20px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 10px;
   }
 
   &__personal {
@@ -49,16 +76,9 @@
       font-size: 2rem;
     }
 
-    ul {
-      margin-bottom: 30px;
-
-      &::last-child {
-        margin-bottom: 0;
-      }
-    }
-
     .courses__list {
       margin-bottom: 50px;
+
       .courses__item {
         margin-bottom: 20px;
 
@@ -68,12 +88,62 @@
 
         &.row {
           align-items: center;
+
+          @include tablet-landscape {
+            flex-direction: column;
+          }
         }
 
         a {
           color: rgba(255, 255, 255, 0.7);
         }
+
+        @include tablet-landscape {
+          .col-10 {
+            flex-basis: 100%;
+            max-width: calc(100% - 40px);
+          }
+
+          .col-2 {
+            flex-basis: auto;
+            max-width: 100%;
+            margin-bottom: 10px;
+          }
+        }
       }
+      @include tablet-landscape {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include tablet-landscape {
+      padding: 30px;
+    }
+
+    @include tablet-landscape-sm {
+      display: flex;
+    }
+  }
+
+  &__languages ul {
+    margin-bottom: 30px;
+  }
+
+  @include tablet-landscape-sm {
+    .col-4 {
+      flex-basis: 100%;
+      max-width: calc(100% - 40px);
+    }
+
+    .col-8 {
+      flex-basis: 100%;
+      max-width: calc(100% - 40px);
+    }
+
+    &__courses {
+      flex-basis: 50%;
+      max-width: calc(50% - 40px);
+      margin: 0 20px;
     }
   }
 }

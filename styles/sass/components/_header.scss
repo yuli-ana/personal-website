@@ -48,4 +48,32 @@
       font-size: 2.2rem;
     }
   }
+
+  @include tablet-landscape {
+    .col-5 {
+      flex-basis: 55%;
+      max-width: calc(55% - 40px);
+    }
+  }
+
+  @include tablet-landscape {
+    .col-5 {
+      flex-basis: 65%;
+      max-width: calc(65% - 40px);
+    }
+  }
+
+  @include tablet-portrait {
+    .col-5 {
+      flex-basis: 75%;
+      max-width: calc(75% - 40px);
+    }
+  }
+
+  @include tablet-portrait-sm {
+    .col-5 {
+      flex-basis: 100%;
+      max-width: calc(100% - 40px);
+    }
+  }
 }
