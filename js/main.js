@@ -4,7 +4,9 @@ const portfolio = {};
 portfolio.scrollIndicator = $('.scroll-indicator');
 portfolio.scrollHint = $('.scroll__hint--left');
 portfolio.offCanvas = $('.offcanvas__wrap');
+portfolio.inputEmail = $('.input__email');
 portfolio.btnContact = $('.btn__contact');
+portfolio.inputName = $('.input__name');
 portfolio.btnCircle = $('.btn__circle');
 portfolio.buttonMenu = $('.btn__menu');
 portfolio.btnAbout = $('.btn__about');
@@ -15,10 +17,11 @@ portfolio.footer = $('.footer');
 portfolio.active = $('#about');
 portfolio.form = $('.form');
 portfolio.html = $('html');
-portfolio.inputName = $('.input__name');
-portfolio.inputEmail = $('.input__email');
 
 
+/**
+ * Store event listeners
+ */
 portfolio.addClickEventListeners = function () {
     this.buttonMenu.on('click', (e) => {
         e.preventDefault();
