@@ -1,5 +1,5 @@
 const portfolio = {};
-portfolio.scrollIndicator = $('.scroll__indicator');
+portfolio.scrollIndicator = $('.scroll-indicator');
 portfolio.scrollHint = $('.scroll__hint--left');
 portfolio.offCanvas = $('.offcanvas__wrap');
 portfolio.btnContact = $('.btn__contact');
@@ -29,10 +29,10 @@ portfolio.openContactForm = function () {
 
         this.html.animate({ scrollTop: 0 }, "slow", () => {
             this.footer.addClass('offcanvas__visible');
-            this.offCanvas.addClass('wrap__right');
+            this.offCanvas.addClass('offcanvas__wrap--right');
             this.buttonMenu.addClass('hide');
             this.header.addClass('flex--start');
-            this.scrollIndicator.addClass('left');
+            this.scrollIndicator.addClass('scroll-indicator--left');
         });
 
 
@@ -41,12 +41,17 @@ portfolio.openContactForm = function () {
 
 portfolio.closeContactForm = function () {
     this.btnCircle.on('click', () => {
-        this.offCanvas.removeClass('wrap__right');
-        this.footer.removeClass('offcanvas__visible');
-        this.buttonMenu.removeClass('hide');
-        this.header.removeClass('flex--start');
-        this.scrollIndicator.removeClass('left');
-    })
+        this.closeContactFormHandler();
+    });
+}
+
+portfolio.closeContactFormHandler = function () {
+    this.offCanvas.removeClass('offcanvas__wrap--right');
+    this.footer.removeClass('offcanvas__visible');
+    this.buttonMenu.removeClass('hide');
+    this.header.removeClass('flex--start');
+    this.scrollIndicator.removeClass('scroll-indicator--left');
+    $('.form__success').hide();
 }
 
 
@@ -77,13 +82,9 @@ portfolio.closeOnScroll = function () {
     $(window).on('scroll', () => {
         const scroll = $(window).scrollTop();
         const footerHasClass = this.footer.hasClass('offcanvas__visible');
-        const offCanvasHasClass = this.offCanvas.hasClass('wrap__right');
 
-        if (scroll >= 100 && footerHasClass && offCanvasHasClass) {
-            this.footer.removeClass('offcanvas__visible');
-            this.offCanvas.removeClass('wrap__right');
-            this.header.removeClass('flex--start');
-            this.scrollIndicator.removeClass('left');
+        if (scroll >= 100 && footerHasClass) {
+            this.closeContactFormHandler();
         }
     })
 }
@@ -94,7 +95,8 @@ portfolio.submitForm = function () {
 
         const form = this.form;
         $.post(form.attr("action"), form.serialize()).then(function () {
-            alert("Thank you!");
+            form.trigger("reset");
+            $('.form__success').fadeIn(500);
         });
 
         this.inputName.text('');
