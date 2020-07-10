@@ -913,6 +913,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+@media only screen and (max-width: 650px) {
+  .header h1 {
+    margin: 20px 0 10px;
+    font-size: 3rem;
+  }
+}
+
 .header h2 {
   font-size: 1.8rem;
   font-weight: normal;

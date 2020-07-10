@@ -12,6 +12,11 @@
     font-weight: bold;
     @include fontSize(36);
     font-family: "Poppins", sans-serif;
+
+    @include tablet-portrait-sm {
+      margin: 20px 0 10px;
+      @include fontSize(30);
+    }
   }
 
   h2 {
