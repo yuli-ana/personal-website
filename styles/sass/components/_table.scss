@@ -1,10 +1,51 @@
 .table {
+  display: table;
+
+  &__row {
+    display: table-row;
+
+    > div {
+      display: table-cell;
+      padding: 0 20px 20px;
+    }
+  }
+
+  &__col {
+    &--2 {
+      width: 16.66666%;
+    }
+
+    &--4 {
+      width: 33.333333%;
+    }
+  }
+
   &__education,
   &__experience {
-    tr {
+    .table__row {
       margin-bottom: 25px;
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  @include tablet-portrait-sm {
+    display: block;
+
+    &__row {
+      display: block;
+
+      > div {
+        display: block;
+        padding: 0 20px 0;
+      }
+    }
+
+    &__col {
+      &--2,
+      &--4 {
+        width: 100%;
       }
     }
   }
