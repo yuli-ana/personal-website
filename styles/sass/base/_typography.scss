@@ -4,6 +4,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
+  @include fontSize(16);
   overflow-x: hidden;
 }

@@ -1,5 +1,5 @@
 .experience {
-  font-size: 1.4rem;
+  @include fontSize(14);
 
   &__work {
     padding: 40px 0;

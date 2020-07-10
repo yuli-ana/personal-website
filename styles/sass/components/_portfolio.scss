@@ -7,6 +7,16 @@
     flex-wrap: wrap;
   }
 
+  .section-title {
+    margin: 0;
+  }
+
+  &__description {
+    color: #a3a3a3;
+    margin: 20px 0;
+    @include fontSize(14);
+  }
+
   &__list {
     .col-4 {
       height: 200px;
@@ -54,7 +64,7 @@
             margin-top: -3px;
             vertical-align: middle;
             font-weight: normal;
-            font-size: 1.5rem;
+            @include fontSize(15);
           }
         }
 

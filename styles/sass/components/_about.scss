@@ -48,7 +48,7 @@
   }
 
   h3 {
-    font-size: 1.4rem;
+    @include fontSize(14);
     margin: unset;
   }
 
@@ -80,11 +80,11 @@
     padding: 40px;
     background-color: $accent-primary;
     border-radius: 10px;
-    font-size: 1.4rem;
+    @include fontSize(14);
 
     h3 {
       color: $main-light;
-      font-size: 2rem;
+      @include fontSize(20);
     }
 
     .courses__list {

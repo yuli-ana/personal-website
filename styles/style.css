@@ -367,6 +367,10 @@ button {
           transform: translate(-110%, -50%);
 }
 
+.chart {
+  margin: 15px 0;
+}
+
 .fab,
 .fas {
   font-size: 2rem;
@@ -374,6 +378,15 @@ button {
 
 .fa-chevron-circle-right {
   font-size: 1.8rem;
+}
+
+.fa-linkedin-in:hover,
+.fa-linkedin-in:focus,
+.fa-github:hover,
+.fa-github:focus,
+.fa-twitter:hover,
+.fa-twitter:focus {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 html {
@@ -1176,10 +1189,6 @@ body {
   }
 }
 
-.chart {
-  margin: 15px 0;
-}
-
 .experience {
   font-size: 1.4rem;
 }
@@ -1273,6 +1282,16 @@ body {
 .portfolio .row {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.portfolio .section-title {
+  margin: 0;
+}
+
+.portfolio__description {
+  color: #a3a3a3;
+  margin: 20px 0;
+  font-size: 1.4rem;
 }
 
 .portfolio__list .col-4 {

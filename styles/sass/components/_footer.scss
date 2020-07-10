@@ -15,7 +15,7 @@
   z-index: 100;
 
   h2 {
-    font-size: 3rem;
+    @include fontSize(30);
     font-weight: bold;
     margin-bottom: 50px;
   }
@@ -37,11 +37,6 @@
     display: flex;
     justify-content: space-between;
   }
-
-  // @include tablet-landscape {
-  //   padding: 40px 4%;
-  //   width: 38px;
-  // }
 
   @include tablet-portrait-sm {
     position: relative;

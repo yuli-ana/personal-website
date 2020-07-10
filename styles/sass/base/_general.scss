@@ -64,7 +64,7 @@ button {
   transform: translateY(-50%);
   color: #000;
   font-weight: bold;
-  font-size: 2rem;
+  @include fontSize(20);
   max-width: 1.35ch;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -81,11 +81,24 @@ button {
   }
 }
 
+.chart {
+  margin: 15px 0;
+}
+
 .fab,
 .fas {
-  font-size: 2rem;
+  @include fontSize(20);
 }
 
 .fa-chevron-circle-right {
-  font-size: 1.8rem;
+  @include fontSize(18);
+}
+
+.fa-linkedin-in:hover,
+.fa-linkedin-in:focus,
+.fa-github:hover,
+.fa-github:focus,
+.fa-twitter:hover,
+.fa-twitter:focus {
+  color: rgba(0, 0, 0, 0.7);
 }

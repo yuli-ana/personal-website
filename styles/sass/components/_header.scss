@@ -10,12 +10,12 @@
   h1 {
     margin: 60px 0 10px;
     font-weight: bold;
-    font-size: 3.6rem;
+    @include fontSize(36);
     font-family: "Poppins", sans-serif;
   }
 
   h2 {
-    font-size: 1.8rem;
+    @include fontSize(18);
     font-weight: normal;
   }
 
@@ -45,7 +45,7 @@
     a {
       color: $accent-secondary;
       padding: 0 20px;
-      font-size: 2.2rem;
+      @include fontSize(22);
     }
   }
 
