@@ -13,6 +13,8 @@ portfolio.footer = $('.footer');
 portfolio.active = $('#about');
 portfolio.form = $('.form');
 portfolio.html = $('html');
+portfolio.inputName = $('.input__name');
+portfolio.inputEmail = $('.input__email');
 
 
 portfolio.toggleMenu = function () {
@@ -33,7 +35,7 @@ portfolio.openContactForm = function () {
             this.scrollIndicator.addClass('left');
         });
 
-    
+
     })
 }
 
@@ -89,8 +91,16 @@ portfolio.closeOnScroll = function () {
 portfolio.submitForm = function () {
     this.form.on('submit', (e) => {
         e.preventDefault();
+
+        const form = $(this);
+        $.post(form.attr("action"), form.name, form.serialize()).then(function () {
+            alert("Thank you!");
+        });
+
+        this.inputName.text('');
+        this.inputEmail.text('');
+
     })
-    // Clear input values when user clicks close footer
 }
 
 portfolio.init = function () {
