@@ -92,8 +92,8 @@ portfolio.submitForm = function () {
     this.form.on('submit', (e) => {
         e.preventDefault();
 
-        const form = $(this);
-        $.post(form.attr("action"), form.name, form.serialize()).then(function () {
+        const form = this.form;
+        $.post(form.attr("action"), form.serialize()).then(function () {
             alert("Thank you!");
         });
 
