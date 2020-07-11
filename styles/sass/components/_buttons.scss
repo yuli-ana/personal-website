@@ -33,6 +33,13 @@
     &:hover {
       color: rgba(0, 0, 0, 0.5);
     }
+
+    @include tablet-portrait-sm {
+      &.col-6 {
+        flex-basis: 65%;
+        max-width: calc(65% - 40px);
+      }
+    }
   }
 
   &__send {
