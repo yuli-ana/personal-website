@@ -90,8 +90,12 @@ button {
   @include fontSize(20);
 }
 
-.fa-chevron-circle-right {
-  @include fontSize(18);
+.fa-times {
+  @include fontSize(26);
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .fa-download {
