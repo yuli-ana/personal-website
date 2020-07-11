@@ -920,9 +920,14 @@ body {
   }
 }
 
+.header .title-name {
+  color: lightcoral;
+}
+
 .header h2 {
   font-size: 1.8rem;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 .header__image.row {

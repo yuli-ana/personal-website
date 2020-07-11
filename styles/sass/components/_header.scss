@@ -19,9 +19,14 @@
     }
   }
 
+  .title-name {
+    color: lightcoral;
+  }
+
   h2 {
     @include fontSize(18);
     font-weight: normal;
+    text-transform: uppercase;
   }
 
   &__image {
