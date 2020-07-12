@@ -1,6 +1,7 @@
 @import "form";
 
 .footer {
+  height: 100%;
   color: $main-light;
   padding: 40px 4%;
   background-color: $accent-primary;
@@ -10,9 +11,14 @@
   width: 35%;
   transition: 0.3s;
   overflow: hidden;
-  height: 100%;
   transform: translate3d(-100.5%, 0, 0);
   z-index: 100;
+
+  .row {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   h2 {
     @include fontSize(30);
@@ -50,5 +56,12 @@
     .btn__circle {
       display: none;
     }
+  }
+
+  .copyright {
+    text-transform: uppercase;
+    @include fontSize(13);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
   }
 }
