@@ -590,6 +590,10 @@ body {
   padding: 10px;
 }
 
+.nav__item a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .nav__item:last-child {
   display: none;
 }
