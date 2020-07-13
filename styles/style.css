@@ -1070,6 +1070,11 @@ body {
   margin-bottom: 50px;
 }
 
+.about__intro p {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
 .about__skills {
   margin-bottom: 70px;
 }

@@ -21,6 +21,11 @@
 
   &__intro {
     margin-bottom: 50px;
+
+    p {
+      @include fontSize(18);
+      line-height: 1.4;
+    }
   }
 
   &__skills {
