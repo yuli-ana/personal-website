@@ -34,7 +34,7 @@ portfolio.addClickEventListeners = function () {
 
     this.btnContact.on('click', () => {
 
-        if($(window).scrollTop() < 50) {
+        if ($(window).scrollTop() < 50) {
             this.openContactFormHandler();
         } else {
             this.html.animate({ scrollTop: 0 }, "slow", () => {
