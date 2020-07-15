@@ -38,16 +38,31 @@
     &__list {
       .col-2 {
         text-align: center;
+        margin: 20px;
+
+        .fa-universal-access {
+          @include fontSize(75);
+          color: lightblue;
+
+          @include tablet-portrait-sm {
+            @include fontSize(80);
+          }
+        }
 
         @include tablet-landscape {
-          flex-basis: 20%;
-          max-width: calc(20% - 40px);
+          // flex-basis: 50%;
+          // max-width: calc(50% - 40px);
         }
 
         @include tablet-portrait-sm {
-          flex-basis: 33.33333%;
-          max-width: calc(33.33333% - 40px);
+          flex-basis: 30%;
+          max-width: calc(30% - 10px);
+          margin: 5px;
         }
+      }
+
+      @include tablet-portrait-sm {
+        justify-content: center;
       }
     }
   }
