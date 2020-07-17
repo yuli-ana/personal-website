@@ -103,6 +103,13 @@ button {
   margin-right: 10px;
 }
 
+.fa-linkedin-in,
+.fa-github,
+.fa-twitter {
+  position: relative;
+  z-index: 10;
+}
+
 .fa-linkedin-in:hover,
 .fa-linkedin-in:focus,
 .fa-github:hover,
