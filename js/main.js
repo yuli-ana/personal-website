@@ -1,7 +1,8 @@
 const portfolio = {};
 
 // TODO: Refactor it. Move to portfolio.selectors
-portfolio.scrollIndicator = $('.scroll-indicator');
+// portfolio.scrollIndicator = $('.scroll-indicator');
+portfolio.scrollIndicator = $('.scroll-type1');
 portfolio.scrollHint = $('.scroll__hint--left');
 portfolio.offCanvas = $('.offcanvas__wrap');
 portfolio.inputEmail = $('.input__email');
