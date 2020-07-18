@@ -18,9 +18,9 @@
       display: none;
     }
 
-    &:hover {
-      color: $dark-light;
-    }
+    // &:hover {
+    //   color: $dark-light;
+    // }
   }
 
   &__resume {
@@ -32,9 +32,9 @@
     letter-spacing: 1px;
     z-index: 10;
 
-    &:hover {
-      color: rgba(0, 0, 0, 0.5);
-    }
+    // &:hover {
+    //   color: rgba(0, 0, 0, 0.5);
+    // }
 
     @include tablet-portrait-sm {
       &.col-6 {

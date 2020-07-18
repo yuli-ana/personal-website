@@ -49,6 +49,10 @@
   &__icons {
     margin: 35px 0 60px;
 
+    &.row {
+      justify-content: center;
+    }
+
     @include tablet-portrait-sm {
       margin: 35px 0;
     }
@@ -60,13 +64,28 @@
     }
   }
 
+  &__list {
+    max-width: 60%;
+  }
+
   &__item {
-    display: inline-block;
+    position: relative;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    @include centerFlex();
+    background-color: #556373;
+    margin: 10px;
+    box-shadow: 0px 0px 3px rgb(60, 60, 81);
 
     a {
-      color: $accent-secondary;
-      padding: 0 20px;
+      color: $main-light;
       @include fontSize(22);
+    }
+
+    &:hover {
+      background-color: $accent-primary;
     }
   }
 
