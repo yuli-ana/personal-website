@@ -129,7 +129,7 @@ portfolio.particles = function() {
             }
           },
           color: {
-            value: ["#2b3c51", "#00A496", "#a58220", "#FF2000", "#FFCF00"]
+            value: ["#2b3c51", "#00A496", "#FF2000", "#FFCF00"]
           },
           shape: {
             type: ["circle"],
