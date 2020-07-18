@@ -238,9 +238,10 @@ portfolio.init = function () {
     this.closeOnScroll();
     this.submitForm();
     this.particles();
-}
-
-
-$(function () {
+  }
+  
+  
+  $(function () {
     portfolio.init();
+    AOS.init();
 });
