@@ -852,7 +852,7 @@ body {
 @media only screen and (max-width: 450px) {
   .btn__send {
     width: 50%;
-    margin: 40px 0 20px;
+    margin: 50px 0 20px;
   }
 }
 
