@@ -13,6 +13,10 @@
     @include tablet-landscape-sm {
       margin-top: 50px;
     }
+
+    @include phone {
+      margin-top: 10px;
+    }
   }
 
   &__description {
