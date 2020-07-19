@@ -392,7 +392,7 @@ button {
 }
 
 .fa-times:hover {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .fa-chevron-circle-right {
@@ -613,7 +613,7 @@ body {
 }
 
 .nav__item a:hover {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .nav__item:last-child {
@@ -845,7 +845,7 @@ body {
 }
 
 .btn__send:hover {
-  background-color: #00a496;
+  background-color: lightcoral;
   color: #ffffff;
 }
 
@@ -937,6 +937,7 @@ body {
 
 .header .title-name {
   color: lightcoral;
+  text-transform: uppercase;
 }
 
 .header h2 {

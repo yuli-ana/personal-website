@@ -102,7 +102,7 @@ button {
   @include fontSize(26);
 
   &:hover {
-    color: rgba(0, 0, 0, 0.5);
+    color: $dark-light;
   }
 }
 
