@@ -339,6 +339,13 @@ button {
           transform: translate3d(36%, 0, 0);
 }
 
+@media only screen and (max-width: 790px) {
+  .offcanvas__wrap--right {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .scroll__hint {
   display: block;
   position: absolute;
@@ -746,6 +753,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 790px) {
+  .scroll-type1 {
+    left: 50%;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .scroll-type1 {
     bottom: 60px;
@@ -876,12 +889,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 450px) {
-  .btn {
-    height: 35px;
-  }
-}
-
 .header {
   min-height: 100vh;
   display: -webkit-box;
@@ -900,6 +907,14 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+@media only screen and (max-width: 790px) {
+  .header.flex--start {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .header h1 {

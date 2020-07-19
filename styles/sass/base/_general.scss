@@ -55,6 +55,10 @@ button {
 
 .offcanvas__wrap--right {
   transform: translate3d(36%, 0, 0);
+
+  @include tablet-landscape-xs {
+    transform: none;
+  }
 }
 
 .scroll__hint {

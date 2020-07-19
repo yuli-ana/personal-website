@@ -48,6 +48,10 @@
     }
   }
 
+  @include tablet-landscape-xs {
+    left: 50%;
+  }
+
   @include tablet-portrait-sm {
     bottom: 60px;
   }
