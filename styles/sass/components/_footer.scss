@@ -24,6 +24,11 @@
     @include fontSize(30);
     font-weight: bold;
     margin-bottom: 50px;
+
+    @include phone {
+      @include fontSize(25);
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -66,7 +71,7 @@
   }
 
   @include tablet-landscape-xs {
-    padding: 40px 8%;
+    padding: 40px 6%;
     position: relative;
     width: 100%;
     transform: none;

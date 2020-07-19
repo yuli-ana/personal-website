@@ -9,11 +9,14 @@
 
   .section-title {
     margin: 0;
+
+    @include tablet-landscape-sm {
+      margin-top: 50px;
+    }
   }
 
   &__description {
     margin: 20px 0;
-    @include fontSize(14);
   }
 
   &__list {
@@ -28,7 +31,8 @@
 
       @include tablet-portrait {
         flex-basis: 70%;
-        max-width: calc(70% - 40px);
+        max-width: calc(70% - 20px);
+        margin: 10px;
       }
     }
 
@@ -56,6 +60,10 @@
           i {
             display: inline-block;
             margin-right: 5px;
+
+            @include phone {
+              display: none;
+            }
           }
 
           h3 {
@@ -64,6 +72,15 @@
             vertical-align: middle;
             font-weight: normal;
             @include fontSize(15);
+
+            @include phone {
+              @include fontSize(12);
+            }
+          }
+
+          @include phone {
+            margin-bottom: 0;
+            text-transform: uppercase;
           }
         }
 
@@ -73,7 +90,16 @@
 
           .col-1 {
             margin: 10px 20px;
+
+            @include phone {
+              margin: 10px 15px;
+            }
           }
+        }
+
+        @include phone {
+          padding: 15px;
+          height: 25%;
         }
       }
 
@@ -121,6 +147,11 @@
         }
       }
     }
+
+    @include tablet-landscape-sm {
+      margin-bottom: 50px;
+    }
+
     @include phone {
       &.row {
         margin: 0;

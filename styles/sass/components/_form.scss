@@ -22,6 +22,10 @@
     &::placeholder {
       color: $main-light;
     }
+
+    @include phone {
+      text-transform: uppercase;
+    }
   }
 
   textarea {

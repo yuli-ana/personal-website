@@ -18,9 +18,9 @@
       display: none;
     }
 
-    // &:hover {
-    //   color: $dark-light;
-    // }
+    &:hover {
+      background-color: rgb(85, 99, 115);
+    }
   }
 
   &__resume {
@@ -32,30 +32,35 @@
     letter-spacing: 1px;
     z-index: 100;
 
-    // &:hover {
-    //   color: rgba(0, 0, 0, 0.5);
-    // }
-
-    @include tablet-portrait-sm {
-      &.col-6 {
-        flex-basis: 50%;
-        max-width: 50%;
-      }
+    &:hover {
+      background-color: rgb(85, 99, 115);
     }
 
-    @include phone {
-      &.col-6 {
-        flex-basis: 60%;
-        max-width: 60%;
-      }
+    &.col-6 {
+      flex-basis: 180px;
+      max-width: 180px;
     }
   }
 
   &__send {
+    @include fontSize(14);
+    letter-spacing: 1px;
     margin: 40px 0;
     background-color: $main-light;
     color: $main-dark;
     width: 33.333%;
+    transition: all 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #00a496;
+      color: $main-light;
+    }
+
+    @include phone {
+      width: 50%;
+      margin: 40px 0 20px;
+    }
   }
 
   &__contact,
@@ -92,5 +97,9 @@
     &__about {
       display: none;
     }
+  }
+
+  @include phone {
+    height: 35px;
   }
 }

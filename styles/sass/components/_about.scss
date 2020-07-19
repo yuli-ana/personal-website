@@ -27,7 +27,7 @@
     }
 
     p {
-      @include fontSize(15);
+      // @include fontSize(15);
       line-height: 1.4;
     }
 
@@ -59,8 +59,12 @@
           color: lightblue;
 
           @include tablet-portrait-sm {
-            @include fontSize(80);
+            @include fontSize(55);
           }
+
+          // @include phone {
+          //   @include fontSize(55);
+          // }
         }
 
         @include tablet-landscape {
@@ -107,6 +111,10 @@
 
   h3 {
     margin-bottom: 10px;
+
+    @include tablet-portrait-sm {
+      margin-bottom: 30px;
+    }
   }
 
   &__personal {
@@ -134,9 +142,9 @@
         &.row {
           align-items: center;
 
-          @include tablet-landscape {
-            flex-direction: column;
-          }
+          // @include tablet-landscape {
+          //   flex-direction: column;
+          // }
 
           @include tablet-portrait-sm {
             align-items: flex-start;
@@ -149,24 +157,30 @@
 
         @include tablet-landscape {
           .col-10 {
-            flex-basis: 100%;
-            max-width: calc(100% - 40px);
+            flex-basis: 80%;
+            max-width: calc(80% - 40px);
           }
 
           .col-2 {
             flex-basis: auto;
-            max-width: 100%;
-            margin-bottom: 10px;
+            // max-width: 100%;
+            // margin-bottom: 10px;
           }
         }
       }
+
       @include tablet-landscape {
         margin-bottom: 40px;
+      }
+
+      @include phone {
+        @include fontSize(13);
       }
     }
 
     @include tablet-landscape {
-      padding: 30px;
+      padding: 20px;
+      @include fontSize(13);
     }
 
     @include tablet-landscape-sm {
