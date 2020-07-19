@@ -24,6 +24,7 @@
     }
 
     @include phone {
+      padding: 20px 0;
       @include fontSize(15);
     }
   }
