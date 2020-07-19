@@ -1633,7 +1633,7 @@ body {
 .form input,
 .form textarea {
   background-color: unset;
-  border: unset;
+  border: transparent;
   color: #ffffff;
   padding: 15px 0;
   width: 100%;
