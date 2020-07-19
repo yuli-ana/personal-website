@@ -24,7 +24,7 @@
     }
 
     @include phone {
-      text-transform: uppercase;
+      @include fontSize(15);
     }
   }
 

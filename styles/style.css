@@ -1682,7 +1682,7 @@ body {
 @media only screen and (max-width: 450px) {
   .form input,
   .form textarea {
-    text-transform: uppercase;
+    font-size: 1.5rem;
   }
 }
 
