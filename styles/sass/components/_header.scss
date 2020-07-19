@@ -118,6 +118,10 @@
       margin: 0;
     }
   }
+
+  @include phone {
+    min-height: 80vh;
+  }
 }
 
 @include tablet-landscape {

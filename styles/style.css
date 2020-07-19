@@ -1045,6 +1045,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .header {
+    min-height: 80vh;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .header-section .wrapper {
     width: 100%;
