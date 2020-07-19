@@ -22,14 +22,28 @@
   &__intro {
     margin-bottom: 50px;
 
+    .row {
+      align-items: center;
+    }
+
     p {
-      @include fontSize(18);
+      @include fontSize(15);
       line-height: 1.4;
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      overflow: hidden;
     }
   }
 
   &__skills {
     margin-bottom: 70px;
+
+    .svg {
+      width: 50px;
+      height: 50px;
+    }
 
     .row {
       flex-wrap: wrap;
@@ -41,7 +55,7 @@
         margin: 20px;
 
         .fa-universal-access {
-          @include fontSize(75);
+          @include fontSize(50);
           color: lightblue;
 
           @include tablet-portrait-sm {
@@ -85,9 +99,9 @@
     }
 
     @include tablet-portrait-sm {
-      display: block;
+      display: inline-block;
       max-width: 100%;
-      margin: 0;
+      margin: 0 50px 0 0;
     }
   }
 
@@ -193,6 +207,25 @@
       display: block;
       max-width: 100%;
       margin: 0;
+    }
+  }
+
+  @include phone {
+    &__intro {
+      .row {
+        flex-direction: column;
+      }
+
+      .col-3 {
+        flex-basis: 65%;
+        max-width: calc(65% - 40px);
+        margin-bottom: 30px;
+      }
+
+      .col-9 {
+        flex-basis: 100%;
+        max-width: calc(100% - 40px);
+      }
     }
   }
 }

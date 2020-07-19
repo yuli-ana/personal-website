@@ -12,9 +12,10 @@
     letter-spacing: 2px;
     margin: 60px 0 10px;
     font-weight: bold;
-    @include fontSize(36);
+    @include fontSize(40);
     font-family: "Poppins", sans-serif;
-    z-index: 10;
+    z-index: 100;
+    color: $main-dark;
 
     @include tablet-portrait-sm {
       @include fontSize(26);
@@ -64,18 +65,18 @@
     }
   }
 
-  &__list {
-    max-width: 60%;
-  }
+  // &__list {
+  //   max-width: 60%;
+  // }
 
   &__item {
     position: relative;
-    z-index: 10;
+    z-index: 100;
     width: 35px;
     height: 35px;
     border-radius: 50%;
     @include centerFlex();
-    background-color: #556373;
+    background-color: rgb(85, 99, 115);
     margin: 10px;
     box-shadow: 0px 0px 3px rgb(60, 60, 81);
 
@@ -91,15 +92,14 @@
 
   @include tablet-landscape {
     .col-5 {
-      flex-basis: 55%;
-      max-width: calc(55% - 40px);
+      flex-basis: 65%;
+      max-width: calc(65% - 40px);
     }
   }
 
-  @include tablet-landscape {
-    .col-5 {
-      flex-basis: 65%;
-      max-width: calc(65% - 40px);
+  @include tablet-landscape-sm {
+    h1 {
+      @include fontSize(30);
     }
   }
 
@@ -114,6 +114,14 @@
     .col-5 {
       flex-basis: 100%;
       max-width: calc(100% - 40px);
+    }
+  }
+}
+
+@include tablet-landscape {
+  .header-section {
+    .wrapper {
+      width: 100%;
     }
   }
 }

@@ -19,10 +19,10 @@ $dark-light: rgba(0, 0, 0, 0.5);
 
 $screen-xxl: 1200px;
 $screen-xl: 968px;
+$screen-xs: 790px;
 $screen-md: 768px;
 $screen-sm: 650px;
-$screen-xs: 0;
-$screen-xxs: 0;
+$screen-xxs: 450px;
 
 @mixin tablet-landscape {
   @media only screen and(max-width: $screen-xxl) {
@@ -32,6 +32,12 @@ $screen-xxs: 0;
 
 @mixin tablet-landscape-sm {
   @media only screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-xs {
+  @media only screen and (max-width: $screen-xs) {
     @content;
   }
 }
@@ -49,13 +55,13 @@ $screen-xxs: 0;
 }
 
 @mixin phone {
-  @media only screen and(max-width: $screen-xs) {
-    @content;
-  }
-}
-
-@mixin phone-xxs {
   @media only screen and(max-width: $screen-xxs) {
     @content;
   }
 }
+
+// @mixin phone-xxs {
+//   @media only screen and(max-width: $screen-xxs) {
+//     @content;
+//   }
+// }

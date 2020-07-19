@@ -30,7 +30,7 @@
     align-items: center;
     transition: all 150ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
     letter-spacing: 1px;
-    z-index: 10;
+    z-index: 100;
 
     // &:hover {
     //   color: rgba(0, 0, 0, 0.5);
@@ -38,8 +38,15 @@
 
     @include tablet-portrait-sm {
       &.col-6 {
-        flex-basis: 65%;
-        max-width: calc(65% - 40px);
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+    }
+
+    @include phone {
+      &.col-6 {
+        flex-basis: 60%;
+        max-width: 60%;
       }
     }
   }
@@ -80,7 +87,7 @@
     @include fontSize(25);
   }
 
-  @include tablet-portrait-sm {
+  @include tablet-landscape-xs {
     &__contact,
     &__about {
       display: none;

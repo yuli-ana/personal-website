@@ -8,6 +8,7 @@
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  z-index: 10;
 
   &::before {
     display: block;
@@ -52,8 +53,6 @@
   }
 
   &--left {
-    bottom: 50px;
-    left: 29%;
-    transform: unset;
+    left: 33%;
   }
 }

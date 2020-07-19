@@ -35,4 +35,41 @@
     border-radius: 10px;
     background-color: #0303033d;
   }
+
+  @include tablet-landscape-xs {
+    text-align: center;
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .form__item {
+        flex: 0 0 50%;
+        max-width: calc(50% - 40px);
+        margin: 0 20px;
+
+        &.textarea {
+          flex: 0 0 100%;
+          max-width: calc(100% - 40px);
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+
+  @include phone {
+    .flex-container {
+      .form__item {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 0;
+
+        &.textarea {
+          flex-basis: 100%;
+          max-width: 100%;
+          margin: 0;
+        }
+      }
+    }
+  }
 }

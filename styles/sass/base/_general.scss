@@ -90,12 +90,20 @@ button {
   @include fontSize(20);
 }
 
+.fa-laptop {
+  color: seashell;
+}
+
 .fa-times {
   @include fontSize(26);
 
   &:hover {
     color: rgba(0, 0, 0, 0.5);
   }
+}
+
+.fa-chevron-circle-right {
+  @include fontSize(14);
 }
 
 .fa-download {
@@ -109,12 +117,3 @@ button {
   position: relative;
   z-index: 10;
 }
-
-// .fa-linkedin-in:hover,
-// .fa-linkedin-in:focus,
-// .fa-github:hover,
-// .fa-github:focus,
-// .fa-twitter:hover,
-// .fa-twitter:focus {
-//   color: rgba(0, 0, 0, 0.7);
-// }
