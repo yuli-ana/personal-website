@@ -1040,7 +1040,8 @@ body {
   .header .col-5 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    max-width: calc(100% - 40px);
+    max-width: 100%;
+    margin: 0;
   }
 }
 

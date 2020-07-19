@@ -70,10 +70,6 @@
     }
   }
 
-  // &__list {
-  //   max-width: 60%;
-  // }
-
   &__item {
     position: relative;
     z-index: 100;
@@ -118,7 +114,8 @@
   @include tablet-portrait-sm {
     .col-5 {
       flex-basis: 100%;
-      max-width: calc(100% - 40px);
+      max-width: 100%;
+      margin: 0;
     }
   }
 }
