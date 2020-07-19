@@ -1515,6 +1515,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .portfolio__list.row {
+    margin: 0;
+  }
+}
+
 @media only screen and (max-width: 968px) {
   .portfolio {
     min-height: unset;

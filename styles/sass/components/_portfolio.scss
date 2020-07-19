@@ -121,6 +121,11 @@
         }
       }
     }
+    @include phone {
+      &.row {
+        margin: 0;
+      }
+    }
   }
 
   @include tablet-landscape-sm {
