@@ -1644,6 +1644,7 @@ body {
 
 .form input,
 .form textarea {
+  outline: none;
   background-color: unset;
   border: transparent;
   color: #ffffff;
