@@ -404,13 +404,6 @@ button {
   margin-right: 10px;
 }
 
-.fa-linkedin-in,
-.fa-github,
-.fa-twitter {
-  position: relative;
-  z-index: 10;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -824,7 +817,7 @@ body {
   -webkit-transition: all 150ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
   transition: all 150ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
   letter-spacing: 1px;
-  z-index: 100;
+  z-index: 10;
 }
 
 .btn__resume:hover {
@@ -929,7 +922,7 @@ body {
   font-weight: bold;
   font-size: 4rem;
   font-family: "Poppins", sans-serif;
-  z-index: 100;
+  z-index: 10;
   color: #000000;
 }
 
@@ -991,7 +984,7 @@ body {
 
 .header__item {
   position: relative;
-  z-index: 100;
+  z-index: 10;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -1328,6 +1321,10 @@ body {
 }
 
 @media only screen and (max-width: 450px) {
+  .about {
+    overflow: hidden;
+    padding-top: 50px;
+  }
   .about__intro .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

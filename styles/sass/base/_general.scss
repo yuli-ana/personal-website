@@ -114,10 +114,3 @@ button {
   @include fontSize(14);
   margin-right: 10px;
 }
-
-.fa-linkedin-in,
-.fa-github,
-.fa-twitter {
-  position: relative;
-  z-index: 10;
-}

@@ -225,6 +225,8 @@
   }
 
   @include phone {
+    overflow: hidden;
+    padding-top: 50px;
     &__intro {
       .row {
         flex-direction: column;
