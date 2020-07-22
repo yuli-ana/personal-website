@@ -792,7 +792,6 @@ body {
   border-radius: 30px;
   text-transform: capitalize;
   cursor: pointer;
-  outline: none;
 }
 
 .btn__menu {
