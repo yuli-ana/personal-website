@@ -6,6 +6,7 @@ function Portfolio() {
     offCanvas: $('.offcanvas__wrap'),
     inputEmail: $('.input__email'),
     btnContact: $('.btn__contact'),
+    dropdown: $('.nav__dropdown'),
     inputName: $('.input__name'),
     btnCircle: $('.btn__circle'),
     buttonMenu: $('.btn__menu'),
@@ -115,6 +116,22 @@ Portfolio.prototype.submitForm = function () {
       form.trigger("reset");
       $('.form__success').fadeIn(500);
     });
+  })
+}
+
+Portfolio.prototype.animateCross = function () {
+  this.selectors.buttonMenu.on('click', function(e) {
+    e.preventDefault();
+    console.log(this);
+    $(this).toggleClass('nav-close');
+
+  })
+}
+
+Portfolio.prototype.navigationIn = function () {
+  this.selectors.buttonMenu.on('click', (e) => {
+    e.preventDefault();
+    this.selectors.dropdown.hide().fadeToggle(200);
   })
 }
 
@@ -235,7 +252,9 @@ Portfolio.prototype.particles = function () {
 Portfolio.prototype.init = function () {
   this.addClickEventListeners();
   this.handleButtonAbout();
+  this.animateCross();
   this.closeOnScroll();
+  this.navigationIn();
   this.submitForm();
   this.particles();
   AOS.init();
