@@ -1,138 +1,138 @@
 .nav-mobile {
   display: none;
 
-  @include phone {
-    display: block;
-    position: relative;
-  }
-
   .svg {
     height: 0;
   }
-}
 
-.menu {
-  filter: url("#shadowed-goo");
-  position: absolute;
-  top: 20px;
-  right: 0;
-  z-index: 10;
+  .menu {
+    filter: url("#shadowed-goo");
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 10;
 
-  a i {
-    @include fontSize(18);
+    a i {
+      @include fontSize(18);
+    }
   }
-}
 
-.menu-item,
-.menu-open-button {
-  @include centerFlex();
-  position: absolute;
-  background: rgb(85, 99, 115);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  top: 0;
-  right: -20px;
-  color: white;
-  transform: translate3d(-0, -0, -0);
-  transition: transform ease-out 200ms;
-}
+  .menu-item,
+  .menu-open-button {
+    @include centerFlex();
+    position: absolute;
+    background: rgb(85, 99, 115);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: -20px;
+    color: white;
+    transform: translate3d(-0, -0, -0);
+    transition: transform ease-out 200ms;
+  }
 
-.menu-open {
-  display: none;
-}
+  .menu-open {
+    display: none;
+  }
 
-.hamburger {
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 3px;
-  background: white;
-  border-radius: 10px;
-  transition: transform 200ms;
-}
+  .hamburger {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: white;
+    border-radius: 10px;
+    transition: transform 200ms;
+  }
 
-.hamburger-1 {
-  transform: translate3d(0, -8px, 0);
-}
+  .hamburger-1 {
+    transform: translate3d(0, -8px, 0);
+  }
 
-.hamburger-2 {
-  transform: translate3d(0, 0, 0);
-}
+  .hamburger-2 {
+    transform: translate3d(0, 0, 0);
+  }
 
-.hamburger-3 {
-  transform: translate3d(0, 8px, 0);
-}
+  .hamburger-3 {
+    transform: translate3d(0, 8px, 0);
+  }
 
-.menu-open:checked + .menu-open-button .hamburger-1 {
-  transform: translate3d(0, 0, 0) rotate(45deg);
-}
-.menu-open:checked + .menu-open-button .hamburger-2 {
-  transform: translate3d(0, 0, 0) scale(0.1, 1);
-}
-.menu-open:checked + .menu-open-button .hamburger-3 {
-  transform: translate3d(0, 0, 0) rotate(-45deg);
-}
+  .menu-open:checked + .menu-open-button .hamburger-1 {
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  .menu-open:checked + .menu-open-button .hamburger-2 {
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+  }
+  .menu-open:checked + .menu-open-button .hamburger-3 {
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+  }
 
-.menu {
-  position: fixed;
-  right: 40px;
-  bottom: 55px;
-  box-sizing: border-box;
-  font-size: 20px;
-  text-align: left;
-}
+  .menu {
+    position: fixed;
+    right: 40px;
+    bottom: 55px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: left;
+  }
 
-.menu-item:hover {
-  background: $main-light;
-  color: #00bcd4;
-}
-.menu-item:nth-child(3) {
-  transition-duration: 180ms;
-}
-.menu-item:nth-child(4) {
-  transition-duration: 180ms;
-}
-.menu-item:nth-child(5) {
-  transition-duration: 180ms;
-}
-.menu-item:nth-child(6) {
-  transition-duration: 180ms;
-}
+  .menu-item:hover {
+    background: $main-light;
+    color: #00bcd4;
+  }
+  .menu-item:nth-child(3) {
+    transition-duration: 180ms;
+  }
+  .menu-item:nth-child(4) {
+    transition-duration: 180ms;
+  }
+  .menu-item:nth-child(5) {
+    transition-duration: 180ms;
+  }
+  .menu-item:nth-child(6) {
+    transition-duration: 180ms;
+  }
 
-.menu-open-button {
-  z-index: 2;
-  transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform: translate3d(0, 0, 0);
-  cursor: pointer;
-}
+  .menu-open-button {
+    z-index: 2;
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translate3d(0, 0, 0);
+    cursor: pointer;
+  }
 
-.menu-open-button:hover {
-  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-}
+  .menu-open-button:hover {
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  }
 
-.menu-open:checked + .menu-open-button {
-  transition: all 200ms linear;
-  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-}
+  .menu-open:checked + .menu-open-button {
+    transition: all 200ms linear;
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+  }
 
-.menu-open:checked ~ .menu-item {
-  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.menu-open:checked ~ .menu-item:nth-child(3) {
-  transition-duration: 190ms;
-  transform: translate3d(0, 80px, 0);
-}
-.menu-open:checked ~ .menu-item:nth-child(4) {
-  transition-duration: 290ms;
-  transform: translate3d(0, 155px, 0);
-}
-.menu-open:checked ~ .menu-item:nth-child(5) {
-  transition-duration: 390ms;
-  transform: translate3d(0, 230px, 0);
-}
-.menu-open:checked ~ .menu-item:nth-child(6) {
-  transition-duration: 490ms;
-  transform: translate3d(0, 305px, 0);
+  .menu-open:checked ~ .menu-item {
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .menu-open:checked ~ .menu-item:nth-child(3) {
+    transition-duration: 190ms;
+    transform: translate3d(0, 80px, 0);
+  }
+  .menu-open:checked ~ .menu-item:nth-child(4) {
+    transition-duration: 290ms;
+    transform: translate3d(0, 155px, 0);
+  }
+  .menu-open:checked ~ .menu-item:nth-child(5) {
+    transition-duration: 390ms;
+    transform: translate3d(0, 230px, 0);
+  }
+  .menu-open:checked ~ .menu-item:nth-child(6) {
+    transition-duration: 490ms;
+    transform: translate3d(0, 305px, 0);
+  }
+
+  @include tablet-portrait-sm {
+    display: block;
+    position: relative;
+  }
 }
