@@ -18,93 +18,127 @@
 
     <div class="parent">
         <div id="particles-js" class="particles-js"></div>
-        <!-- navigation -->
+        <!-- navigation mobile -->
         <div class="offcanvas__wrap" id="home">
+            <div class="nav-mobile">
+                <nav class="menu">
+                    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+                    <label class="menu-open-button" for="menu-open">
+                            <span class="hamburger hamburger-1"></span>
+                            <span class="hamburger hamburger-2"></span>
+                            <span class="hamburger hamburger-3"></span>
+                    </label>
+
+                    <a href="/#home" class="menu-item"> <i class="fas fa-home"></i></a>
+                    <a href="/#about" class="menu-item"> <i class="far fa-user"></i> </a>
+                    <a href="/#portfolio" class="menu-item"> <i class="fas fa-laptop-code"></i></a>
+                    <a href="/#contact" class="menu-item"> <i class="far fa-envelope"></i> </a>
+                </nav>
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="shadowed-goo">
+
+                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                                result="goo" />
+                            <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                            <feColorMatrix in="shadow" mode="matrix"
+                                values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                            <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                            <feComposite in2="shadow" in="goo" result="goo" />
+                            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                        </filter>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                                result="goo" />
+                            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
             <nav>
                 <div class="nav">
                     <div class="row">
                         <div class="col-9 row">
                             <div class="col-auto">
-                                <button class="btn btn__menu">
-                                    <!-- <i class=" fas fa-bars"></i>-->
-                                    <div class="inner"></div>
-                                </button>
-                            </div>
-                            <div class="col-11 nav__dropdown">
-                                <ul class="nav__list">
-                                    <li class="nav__item col-2"><a href="/#home">home</a></li>
-                                    <li class="nav__item col-2"><a href="/#about">about</a></li>
-                                    <li class="nav__item col-2"><a href="/#portfolio">portfolio</a></li>
-                                    <li class="nav__item col-2"><a href="/#contact">contact</a></li>
-                                </ul>
-                            </div>
+                                <button class="btn btn__menu"">
+                                    <div class=" inner"></div>
+                            </button>
+                        </div>
+                        <div class="col-11 nav__dropdown">
+                            <ul class="nav__list">
+                                <li class="nav__item col-2"><a href="/#home">home</a></li>
+                                <li class="nav__item col-2"><a href="/#about">about</a></li>
+                                <li class="nav__item col-2"><a href="/#portfolio">portfolio</a></li>
+                                <li class="nav__item col-2"><a href="/#contact">contact</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </nav>
-
-            <!-- header -->
-            <header class="header-section" id="home header">
-                <div class="wrapper">
-                    <div class="header">
-                        <div class="col col-5">
-                            <div>
-                                <h1>Hi, I'm <span class="title-name">Yuliana</span>!</h1>
-                                <h2>
-                                    </ Front - End Developer>
-                                </h2>
-                            </div>
-                            <div class="header__icons row">
-                                <ul class="header__list row">
-                                    <li class="header__item col-auto">
-                                        <a href="https://www.linkedin.com/in/yuliana-hazda-b0ab711a8/" target="_blank"
-                                            rel="noreferrer noopener"><i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li class="header__item col-auto">
-                                        <a href="https://github.com/yuli-ana" target="_blank"
-                                            rel="noreferrer noopener"><i class="fab fa-github"></i>
-                                        </a>
-                                    </li>
-                                    <li class="header__item col-auto">
-                                        <a href="https://twitter.com/yulianahazda" target="_blank"
-                                            rel="noreferrer noopener"><i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="header__button row">
-                                <a href="https://yuliana.dev/files/yuliana-hazda-resume.pdf" download
-                                    class="col-6 btn btn__resume"><i class="fas fa-download"></i></i>resume</a>
-                            </div>
-                        </div>
-                        <div class="scroll-type1"></div>
-                    </div>
-                </div>
-            </header>
         </div>
+        </nav>
 
-        <button class="btn btn__contact">
-            <span class="scroll__hint scroll__hint--right">contact</span>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px"
-                height="214px">
-                <path fill-rule="evenodd" fill="#2B3C51"
-                    d="M37.986,141.782 C17.296,118.013 20.556,127.799 10.392,121.783 C10.332,152.499 7.895,183.560 9.599,214.014 C12.523,199.744 11.775,178.588 15.277,164.938 C18.466,150.582 25.904,143.732 37.986,141.782 L37.986,141.782 Z" />
-                <path fill-rule="evenodd" fill="#2B3C51"
-                    d="M37.580,72.194 C16.845,95.955 20.111,86.172 9.926,92.187 C9.866,61.480 7.424,30.430 9.131,-0.014 C12.062,14.250 11.312,35.400 14.822,49.046 C18.018,63.397 25.472,70.245 37.580,72.194 L37.580,72.194 Z" />
-                <path fill-rule="evenodd" fill="#2B3C51"
-                    d="M40.000,72.000 C62.091,72.000 80.000,87.670 80.000,107.000 C80.000,126.330 62.091,142.000 40.000,142.000 C17.909,142.000 0.000,126.330 0.000,107.000 C0.000,87.670 17.909,72.000 40.000,72.000 Z" />
-            </svg>
-        </button>
+        <!-- header -->
+        <header class="header-section" id="home header">
+            <div class="wrapper">
+                <div class="header">
+                    <div class="col col-5">
+                        <div>
+                            <h1>Hi, I'm <span class="title-name">Yuliana</span>!</h1>
+                            <h2>
+                                </ Front - End Developer>
+                            </h2>
+                        </div>
+                        <div class="header__icons row">
+                            <ul class="header__list row">
+                                <li class="header__item col-auto">
+                                    <a href="https://www.linkedin.com/in/yuliana-hazda-b0ab711a8/" target="_blank"
+                                        rel="noreferrer noopener"><i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                                <li class="header__item col-auto">
+                                    <a href="https://github.com/yuli-ana" target="_blank" rel="noreferrer noopener"><i
+                                            class="fab fa-github"></i>
+                                    </a>
+                                </li>
+                                <li class="header__item col-auto">
+                                    <a href="https://twitter.com/yulianahazda" target="_blank"
+                                        rel="noreferrer noopener"><i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__button row">
+                            <a href="https://yuliana.dev/files/yuliana-hazda-resume.pdf" download
+                                class="col-6 btn btn__resume"><i class="fas fa-download"></i></i>resume</a>
+                        </div>
+                    </div>
+                    <div class="scroll-type1"></div>
+                </div>
+            </div>
+        </header>
+    </div>
 
-        <button class="btn btn__about">
-            <span class="scroll__hint scroll__hint--left">About</span>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px"
-                height="80px">
-                <path fill-rule="evenodd" fill="#2B3C51"
-                    d="M40.000,-0.000 C62.091,-0.000 80.000,17.909 80.000,40.000 C80.000,62.091 62.091,80.000 40.000,80.000 C17.909,80.000 -0.000,62.091 -0.000,40.000 C-0.000,17.909 17.909,-0.000 40.000,-0.000 Z" />
-            </svg>
-        </button>
+    <button class="btn btn__contact">
+        <span class="scroll__hint scroll__hint--right">contact</span>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="214px">
+            <path fill-rule="evenodd" fill="#2B3C51"
+                d="M37.986,141.782 C17.296,118.013 20.556,127.799 10.392,121.783 C10.332,152.499 7.895,183.560 9.599,214.014 C12.523,199.744 11.775,178.588 15.277,164.938 C18.466,150.582 25.904,143.732 37.986,141.782 L37.986,141.782 Z" />
+            <path fill-rule="evenodd" fill="#2B3C51"
+                d="M37.580,72.194 C16.845,95.955 20.111,86.172 9.926,92.187 C9.866,61.480 7.424,30.430 9.131,-0.014 C12.062,14.250 11.312,35.400 14.822,49.046 C18.018,63.397 25.472,70.245 37.580,72.194 L37.580,72.194 Z" />
+            <path fill-rule="evenodd" fill="#2B3C51"
+                d="M40.000,72.000 C62.091,72.000 80.000,87.670 80.000,107.000 C80.000,126.330 62.091,142.000 40.000,142.000 C17.909,142.000 0.000,126.330 0.000,107.000 C0.000,87.670 17.909,72.000 40.000,72.000 Z" />
+        </svg>
+    </button>
+
+    <button class="btn btn__about">
+        <span class="scroll__hint scroll__hint--left">About</span>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="80px">
+            <path fill-rule="evenodd" fill="#2B3C51"
+                d="M40.000,-0.000 C62.091,-0.000 80.000,17.909 80.000,40.000 C80.000,62.091 62.091,80.000 40.000,80.000 C17.909,80.000 -0.000,62.091 -0.000,40.000 C-0.000,17.909 17.909,-0.000 40.000,-0.000 Z" />
+        </svg>
+    </button>
     </div>
 
 

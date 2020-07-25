@@ -131,9 +131,11 @@ Portfolio.prototype.animateCross = function () {
 Portfolio.prototype.navigationIn = function () {
   this.selectors.buttonMenu.on('click', (e) => {
     e.preventDefault();
-    this.selectors.dropdown.hide().fadeToggle(200);
+    this.selectors.buttonMenu.addClass('remove');
+    this.selectors.dropdown.hide().fadeIn(200);
   })
 }
+
 
 Portfolio.prototype.particles = function () {
   particlesJS("particles-js", {
