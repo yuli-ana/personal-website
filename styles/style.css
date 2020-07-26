@@ -658,7 +658,7 @@ body {
   height: 40px;
   border-radius: 40px;
   border: 1px solid #000;
-  bottom: 60px;
+  bottom: 40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -728,7 +728,7 @@ body {
 
 @media only screen and (max-width: 650px) {
   .scroll-type1 {
-    bottom: 60px;
+    bottom: 75px;
   }
 }
 
