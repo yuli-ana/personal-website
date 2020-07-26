@@ -732,12 +732,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 650px) {
-  .scroll-type1 {
-    bottom: 0;
-  }
-}
-
 .scroll-type1--left {
   left: 33%;
 }

@@ -56,10 +56,6 @@
     bottom: 75px;
   }
 
-  @include tablet-portrait-sm {
-    bottom: 0;
-  }
-
   &--left {
     left: 33%;
   }
