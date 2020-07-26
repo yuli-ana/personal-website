@@ -658,7 +658,7 @@ body {
   height: 40px;
   border-radius: 40px;
   border: 1px solid #000;
-  bottom: 40px;
+  bottom: 60px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
