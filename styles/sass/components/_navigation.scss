@@ -26,6 +26,13 @@
       display: flex;
     }
 
+    @include tablet-landscape-xs {
+      .col-4 {
+        flex-basis: 25%;
+        max-width: calc(25% - 40px);
+      }
+    }
+
     @include phone {
       border-radius: unset;
     }
@@ -38,12 +45,30 @@
       transition: all 200ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
       &:hover {
-        color: $dark-light;
+        transform: scale(1.2);
       }
     }
 
     &:last-child {
       display: none;
+    }
+  }
+
+  @include tablet-landscape {
+    width: 80%;
+  }
+
+  @include tablet-landscape-xs {
+    width: 100%;
+
+    &__item {
+      a {
+        @include fontSize(14);
+      }
+
+      &:last-child {
+        display: block;
+      }
     }
   }
 

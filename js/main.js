@@ -30,11 +30,13 @@ Portfolio.prototype.addClickEventListeners = function () {
     this.selectors.navList.toggleClass('opacity');
   });
 
-  this.selectors.btnCircle.on('click', () => {
+  this.selectors.btnCircle.on('click', (e) => {
+    e.preventDefault();
     this.closeContactFormHandler();
   });
 
-  this.selectors.btnContact.on('click', () => {
+  this.selectors.btnContact.on('click', (e) => {
+    e.preventDefault();
     if ($(window).scrollTop() < 50) {
       this.openContactFormHandler();
     } else {
@@ -43,6 +45,11 @@ Portfolio.prototype.addClickEventListeners = function () {
       });
     }
   });
+
+  this.selectors.buttonMenu.on('click', (e) => {
+    e.preventDefault();
+    this.selectors.dropdown.hide().fadeIn(200);
+  })
 }
 
 /**
@@ -127,15 +134,6 @@ Portfolio.prototype.animateCross = function () {
 
   })
 }
-
-Portfolio.prototype.navigationIn = function () {
-  this.selectors.buttonMenu.on('click', (e) => {
-    e.preventDefault();
-    this.selectors.buttonMenu.addClass('remove');
-    this.selectors.dropdown.hide().fadeIn(200);
-  })
-}
-
 
 Portfolio.prototype.particles = function () {
   particlesJS("particles-js", {
@@ -256,7 +254,6 @@ Portfolio.prototype.init = function () {
   this.handleButtonAbout();
   this.animateCross();
   this.closeOnScroll();
-  this.navigationIn();
   this.submitForm();
   this.particles();
   AOS.init();
