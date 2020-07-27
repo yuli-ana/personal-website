@@ -115,6 +115,10 @@
 
           .col-auto {
             margin: 10px;
+
+            @include phone {
+              margin: 8px;
+            }
           }
         }
 

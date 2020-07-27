@@ -1563,6 +1563,12 @@ body {
 }
 
 @media only screen and (max-width: 450px) {
+  .portfolio__list .image__container .overlay__list .col-auto {
+    margin: 8px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
   .portfolio__list .image__container .overlay {
     padding: 15px;
     height: 25%;
