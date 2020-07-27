@@ -132,24 +132,24 @@ Portfolio.prototype.animateCross = function () {
 }
 
 // Add debounce function to avoid triggering event multiple times on scroll
-Portfolio.prototype.showHeight = function () {
-  $(window).on('scroll', _.debounce(() => this.checkSection(), 20));
-}
+// Portfolio.prototype.showHeight = function () {
+//   $(window).on('scroll', _.debounce(() => this.checkSection(), 20));
+// }
 
-Portfolio.prototype.checkSection = function () {
-  const sections = this.selectors.sections;
-  sections.each(function(section) {
-    // Hals way through the section
-    const slideInAt = (window.scrollY + window.innerHeight) - $(this).height() / 2;
-    //Bottom of the section
-    const sectionBottom = $(this).offset().top + $(this).height();
-    const isHalfShown = slideInAt > section.offset().top;
-    const isNotScrolledPast = window.scrollY < sectionBottom;
-    if(isHalfShown && isNotScrolledPast){
-      
-    }
-  })
-}
+// Portfolio.prototype.checkSection = function () {
+//   const sections = this.selectors.sections;
+//   sections.each(function(section) {
+//     // Hals way through the section
+//     const slideInAt = (window.scrollY + window.innerHeight) - $(this).height() / 2;
+//     //Bottom of the section
+//     const sectionBottom = $(this).offset().top + $(this).height();
+//     const isHalfShown = slideInAt > section.offset().top;
+//     const isNotScrolledPast = window.scrollY < sectionBottom;
+//     if(isHalfShown && isNotScrolledPast){
+
+//     }
+//   })
+// }
 
 Portfolio.prototype.particles = function () {
   particlesJS("particles-js", {
@@ -270,7 +270,7 @@ Portfolio.prototype.init = function () {
   this.handleButtonAbout();
   this.closeOnScroll();
   this.animateCross();
-  this.showHeight();
+  // this.showHeight();
   this.submitForm();
   this.particles();
   AOS.init();
