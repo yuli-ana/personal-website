@@ -1459,6 +1459,11 @@ body {
   }
 }
 
+.portfolio__list .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .portfolio__list .col-4 {
   height: 200px;
   margin: 20px;
@@ -1546,14 +1551,8 @@ body {
   transition: all 0.4s 0.2s ease;
 }
 
-.portfolio__list .image__container .overlay__list .col-1 {
-  margin: 10px 20px;
-}
-
-@media only screen and (max-width: 450px) {
-  .portfolio__list .image__container .overlay__list .col-1 {
-    margin: 10px 15px;
-  }
+.portfolio__list .image__container .overlay__list .col-auto {
+  margin: 10px;
 }
 
 @media only screen and (max-width: 450px) {

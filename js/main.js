@@ -13,6 +13,7 @@ function Portfolio() {
     btnAbout: $('.btn__about'),
     navList: $('.nav__list'),
     btnSend: $('.btn__send'),
+    sections: $('.section'),
     header: $('.header'),
     footer: $('.footer'),
     active: $('#about'),
@@ -77,7 +78,6 @@ Portfolio.prototype.closeContactFormHandler = function () {
   $('.form__success').hide();
 }
 
-
 /**
  * Handles page navigation
  */
@@ -107,7 +107,6 @@ Portfolio.prototype.closeOnScroll = function () {
   $(window).on('scroll', () => {
     const scroll = $(window).scrollTop();
     const footerHasClass = this.selectors.footer.hasClass('offcanvas__visible');
-
     if (scroll >= 100 && footerHasClass) {
       this.closeContactFormHandler();
     }
@@ -117,7 +116,6 @@ Portfolio.prototype.closeOnScroll = function () {
 Portfolio.prototype.submitForm = function () {
   this.selectors.form.on('submit', (e) => {
     e.preventDefault();
-
     const form = this.selectors.form;
     $.post(form.attr("action"), form.serialize()).then(function () {
       form.trigger("reset");
@@ -127,11 +125,29 @@ Portfolio.prototype.submitForm = function () {
 }
 
 Portfolio.prototype.animateCross = function () {
-  this.selectors.buttonMenu.on('click', function(e) {
-    e.preventDefault();
-    console.log(this);
+  this.selectors.buttonMenu.on('click', function (e) {
+    e.preventDefault();;
     $(this).toggleClass('nav-close');
+  })
+}
 
+// Add debounce function to avoid triggering event multiple times on scroll
+Portfolio.prototype.showHeight = function () {
+  $(window).on('scroll', _.debounce(() => this.checkSection(), 20));
+}
+
+Portfolio.prototype.checkSection = function () {
+  const sections = this.selectors.sections;
+  sections.each(function(section) {
+    // Hals way through the section
+    const slideInAt = (window.scrollY + window.innerHeight) - $(this).height() / 2;
+    //Bottom of the section
+    const sectionBottom = $(this).offset().top + $(this).height();
+    const isHalfShown = slideInAt > section.offset().top;
+    const isNotScrolledPast = window.scrollY < sectionBottom;
+    if(isHalfShown && isNotScrolledPast){
+      
+    }
   })
 }
 
@@ -252,8 +268,9 @@ Portfolio.prototype.particles = function () {
 Portfolio.prototype.init = function () {
   this.addClickEventListeners();
   this.handleButtonAbout();
-  this.animateCross();
   this.closeOnScroll();
+  this.animateCross();
+  this.showHeight();
   this.submitForm();
   this.particles();
   AOS.init();

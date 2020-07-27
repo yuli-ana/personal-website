@@ -32,6 +32,11 @@
   }
 
   &__list {
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     .col-4 {
       height: 200px;
       margin: 20px;
@@ -100,12 +105,8 @@
           margin-top: 15rem;
           transition: all 0.4s 0.2s ease;
 
-          .col-1 {
-            margin: 10px 20px;
-
-            @include phone {
-              margin: 10px 15px;
-            }
+          .col-auto {
+            margin: 10px;
           }
         }
 
