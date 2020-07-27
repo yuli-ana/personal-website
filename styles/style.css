@@ -905,7 +905,6 @@ body {
 
 .header .title-name {
   color: lightcoral;
-  text-transform: uppercase;
 }
 
 .header h2 {
@@ -1629,13 +1628,11 @@ body {
 
 .form input,
 .form textarea {
-  outline: none;
   background-color: unset;
   border: transparent;
   color: #ffffff;
   padding: 15px 0;
   width: 100%;
-  outline: none;
   border-bottom: 1px solid #ffffff;
 }
 
@@ -1671,6 +1668,7 @@ body {
     padding: 20px 0;
     font-size: 1.5rem;
     margin-bottom: 20px;
+    border-radius: none;
   }
 }
 

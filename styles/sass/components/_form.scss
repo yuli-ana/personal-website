@@ -7,13 +7,11 @@
 
   input,
   textarea {
-    outline: none;
     background-color: unset;
     border: transparent;
     color: $main-light;
     padding: 15px 0;
     width: 100%;
-    outline: none;
     border-bottom: 1px solid $main-light;
 
     &:invalid {
@@ -28,6 +26,7 @@
       padding: 20px 0;
       @include fontSize(15);
       margin-bottom: 20px;
+      border-radius: none;
     }
   }
 
