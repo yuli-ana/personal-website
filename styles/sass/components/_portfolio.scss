@@ -14,6 +14,10 @@
       margin-top: 50px;
     }
 
+    @include tablet-portrait-sm {
+      margin: 20px 20px 10px;
+    }
+
     @include phone {
       margin-top: 10px;
     }
@@ -21,6 +25,10 @@
 
   &__description {
     margin: 20px 0;
+
+    @include tablet-portrait-sm {
+      margin: 0 20px 20px;
+    }
   }
 
   &__list {
@@ -143,6 +151,7 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
         overflow: auto;
+        margin: 0 20px;
 
         .col-4 {
           &:last-child {
@@ -153,17 +162,21 @@
     }
 
     @include tablet-landscape-sm {
-      margin-bottom: 50px;
-    }
-
-    @include phone {
-      &.row {
-        margin: 0;
-      }
+      margin-bottom: 30px;
     }
   }
 
   @include tablet-landscape-sm {
     min-height: unset;
+  }
+
+  @include tablet-portrait-sm {
+    .wrapper {
+      padding: 0;
+    }
+  }
+
+  @include phone {
+    margin-top: 20px;
   }
 }
