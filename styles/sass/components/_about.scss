@@ -45,6 +45,26 @@
       height: 50px;
     }
 
+    .fa-heart {
+      position: relative;
+      z-index: -1;
+      @include fontSize(50);
+
+      &::after {
+        content: "</>";
+        display: inline-block;
+        @include fontSize(15);
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        color: $main-light;
+        z-index: 10;
+      }
+    }
+
     .row {
       flex-wrap: wrap;
     }
@@ -53,6 +73,7 @@
       .col-2 {
         text-align: center;
         margin: 20px;
+        max-height: 55px;
 
         .fa-universal-access {
           @include fontSize(50);
@@ -61,15 +82,6 @@
           @include tablet-portrait-sm {
             @include fontSize(55);
           }
-
-          // @include phone {
-          //   @include fontSize(55);
-          // }
-        }
-
-        @include tablet-landscape {
-          // flex-basis: 50%;
-          // max-width: calc(50% - 40px);
         }
 
         @include tablet-portrait-sm {
