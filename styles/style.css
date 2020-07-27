@@ -623,8 +623,8 @@ body {
 }
 
 .nav__item a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .nav__item:last-child {
@@ -1090,12 +1090,11 @@ body {
 
 .about__skills .svg {
   width: 50px;
-  height: 50px;
+  max-height: 50px;
 }
 
 .about__skills .fa-heart {
   position: relative;
-  z-index: -1;
   font-size: 5rem;
 }
 
@@ -1111,7 +1110,6 @@ body {
   width: 10px;
   height: 10px;
   color: #ffffff;
-  z-index: 10;
 }
 
 .about__skills .row {
@@ -1122,7 +1120,6 @@ body {
 .about__skills__list .col-2 {
   text-align: center;
   margin: 20px;
-  max-height: 55px;
 }
 
 .about__skills__list .col-2 .fa-universal-access {
@@ -1132,7 +1129,7 @@ body {
 
 @media only screen and (max-width: 650px) {
   .about__skills__list .col-2 .fa-universal-access {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
 }
 
