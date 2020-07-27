@@ -1532,9 +1532,16 @@ body {
   font-size: 1.5rem;
 }
 
+.portfolio__list .image__container .overlay__title h3 span {
+  font-size: 1.2rem;
+}
+
 @media only screen and (max-width: 450px) {
   .portfolio__list .image__container .overlay__title h3 {
     font-size: 1.2rem;
+  }
+  .portfolio__list .image__container .overlay__title h3 span {
+    font-size: 1rem;
   }
 }
 

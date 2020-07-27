@@ -90,8 +90,16 @@
             font-weight: normal;
             @include fontSize(15);
 
+            span {
+              @include fontSize(12);
+            }
+
             @include phone {
               @include fontSize(12);
+
+              span {
+                @include fontSize(10);
+              }
             }
           }
 
