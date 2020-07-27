@@ -1687,7 +1687,7 @@ body {
     padding: 20px 0;
     font-size: 1.5rem;
     margin-bottom: 20px;
-    border-radius: none;
+    border-radius: 0;
   }
 }
 
