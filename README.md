@@ -6,4 +6,4 @@
 
 ## Demo 
 
-![Farmers Market Finder Demo](assets/portfolio-demo.gif)
+![Portfolio Demo](assets/demo.gif)
