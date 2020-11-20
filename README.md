@@ -6,4 +6,4 @@
 
 ## Demo 
 
-![Portfolio Demo](assets/demo.gif)
+![Portfolio Demo](assets/main.gif)
